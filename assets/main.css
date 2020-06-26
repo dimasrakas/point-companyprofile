@@ -1,0 +1,9 @@
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
