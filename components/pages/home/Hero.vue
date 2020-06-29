@@ -1,10 +1,10 @@
 <template>
   <div class="bg-gray-200 md:overflow-hidden">
-    <div class="px-4 py-16">
+    <div class="px-4 py-16 mt-5">
       <div class="relative w-full md:max-w-2xl md:mx-auto text-center">
         <h1
           v-cloak
-          v-scroll-reveal.reset
+          v-scroll-reveal
           class="font-bold text-gray-800 text-xl sm:text-2xl md:text-5xl leading-tight mb-6"
         >
           Fully control your business while on the go
@@ -12,7 +12,7 @@
 
         <p
           v-cloak
-          v-scroll-reveal.reset="{ delay: 250 }"
+          v-scroll-reveal="{ delay: 250 }"
           class="text-gray-600 md:text-xl md:px-18"
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit hello.
@@ -20,7 +20,7 @@
 
         <div
           v-cloak
-          v-scroll-reveal.reset="{ delay: 300 }"
+          v-scroll-reveal="{ delay: 300 }"
           class="flex justify-center mt-10"
         >
           <button

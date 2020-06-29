@@ -13,28 +13,58 @@
         <div class="hidden md:block">
           <nuxt-link
             to="/"
-            class="inline-block py-1 md:py-4 text-blue-500 mr-6 font-bold"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('index'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 1"
             >Home</nuxt-link
           >
           <nuxt-link
             to="/web/features"
-            class="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6 font-medium"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('features'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 2"
             >Features</nuxt-link
           >
 
           <nuxt-link
             to="/web/about"
-            class="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6 font-medium"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('about'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 3"
             >About Point</nuxt-link
+          >
+
+          <nuxt-link
+            to="/web/articles"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('articles'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 4"
+            >Articles</nuxt-link
           >
           <nuxt-link
             to="/web/pricing"
-            class="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6 font-medium"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('pricing'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 1"
             >Pricing</nuxt-link
           >
           <nuxt-link
             to="/web/contact"
-            class="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6 font-medium"
+            :class="{
+              'text-blue-700 font-bold': this.$route.name.includes('contact'),
+            }"
+            class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
+            @click="activeTab = 5"
             >Contact Us</nuxt-link
           >
         </div>
@@ -58,5 +88,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      activeTab: [],
+    }
+  },
+}
 </script>

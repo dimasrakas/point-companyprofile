@@ -1,6 +1,6 @@
 <template>
   <div
-    v-scroll-reveal.reset="{ delay: 350 }"
+    v-scroll-reveal="{ delay: 350 }"
     class="max-w-4xl mx-auto bg-white shadow-lg relative z-20 hidden md:block"
     style="margin-top: -320px; border-radius: 20px;"
   >

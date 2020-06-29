@@ -2,7 +2,7 @@
   <section class="py-4">
     <div class="py-12 bg-white">
       <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div v-scroll-reveal.reset="{ delay: 200 }" class="lg:text-center">
+        <div v-scroll-reveal="{ delay: 200 }" class="lg:text-center">
           <p
             class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
           >
@@ -22,7 +22,7 @@
         <div class="mt-10">
           <ul class="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
             <li>
-              <div v-scroll-reveal.reset="{ delay: 250 }" class="flex">
+              <div v-scroll-reveal="{ delay: 250 }" class="flex">
                 <div class="flex-shrink-0">
                   <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white"
@@ -55,7 +55,7 @@
               </div>
             </li>
             <li class="mt-10 md:mt-0">
-              <div v-scroll-reveal.reset="{ delay: 300 }" class="flex">
+              <div v-scroll-reveal="{ delay: 300 }" class="flex">
                 <div class="flex-shrink-0">
                   <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white"
@@ -88,7 +88,7 @@
               </div>
             </li>
             <li class="mt-10 md:mt-0">
-              <div v-scroll-reveal.reset="{ delay: 350 }" class="flex">
+              <div v-scroll-reveal="{ delay: 350 }" class="flex">
                 <div class="flex-shrink-0">
                   <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white"
@@ -121,7 +121,7 @@
               </div>
             </li>
             <li class="mt-10 md:mt-0">
-              <div v-scroll-reveal.reset="{ delay: 400 }" class="flex">
+              <div v-scroll-reveal="{ delay: 400 }" class="flex">
                 <div class="flex-shrink-0">
                   <div
                     class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white"
