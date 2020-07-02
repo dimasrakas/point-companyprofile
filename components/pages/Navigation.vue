@@ -19,7 +19,7 @@
             class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
             @click="activeTab = 1"
           >
-            Home
+            Beranda
           </nuxt-link>
           <nuxt-link
             to="/web/features"
