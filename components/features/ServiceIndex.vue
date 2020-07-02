@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap -mx-4 text-center py-4 mb-10">
     <div class="sm:w-1/2 mb-10 px-4 py-4">
-      <nuxt-link to="/web/features/manufacture/details">
+      <div @click="showContentDetail = 1">
         <div class="rounded-lg h-64 overflow-hidden">
           <img
             alt="content"
@@ -10,13 +10,13 @@
           />
         </div>
         <h2 class="title-font text-3xl font-semibold text-gray-900 mt-6 mb-3">
-          Creating Invoice
+          Creating Invoice Service
         </h2>
         <p class="leading-relaxed text-base">
           Williamsburg occupy sustainable snackwave gochujang. Pinterest
           cornhole brunch, slow-carb neutra irony.
         </p>
-      </nuxt-link>
+      </div>
     </div>
     <div class="sm:w-1/2 mb-10 px-4 py-4">
       <nuxt-link to="/web/features/manufacture/details">

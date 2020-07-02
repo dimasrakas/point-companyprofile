@@ -2,10 +2,11 @@
   <section>
     <div class="container px-5 py-5 mx-auto">
       <div class="block md:flex md:space-x-2 px-2 lg:p-0">
-        <a
+        <router-link
+          v-scroll-reveal="{ delay: 200 }"
+          to="/web/articles/detail"
           class="mb-4 md:mb-0 w-full md:w-2/3 relative rounded inline-block"
           style="height: 24em;"
-          href="./blog.html"
         >
           <div
             class="absolute left-0 bottom-0 w-full h-full z-10"
@@ -18,7 +19,7 @@
             "
           ></div>
           <img
-            src="https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+            src="https://images.unsplash.com/photo-1593291683687-5389cd94b450?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
             class="absolute left-0 top-0 w-full h-full rounded z-0 object-cover"
           />
           <div class="p-4 absolute bottom-0 left-0 z-20">
@@ -41,9 +42,10 @@
               </div>
             </div>
           </div>
-        </a>
+        </router-link>
 
         <a
+          v-scroll-reveal="{ delay: 250 }"
           class="w-full md:w-1/3 relative rounded"
           style="height: 24em;"
           href="./blog.html"
@@ -59,7 +61,7 @@
             "
           ></div>
           <img
-            src="https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80"
+            src="https://images.unsplash.com/photo-1593359863503-f598684c806f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
             class="absolute left-0 top-0 w-full h-full rounded z-0 object-cover"
           />
           <div class="p-4 absolute bottom-0 left-0 z-20">
@@ -89,13 +91,14 @@
         <!-- post cards -->
         <div class="w-full lg:w-2/3">
           <a
+            v-scroll-reveal="{ delay: 300 }"
             class="block rounded w-full lg:flex mb-10"
             href="./blog-single-1.html"
           >
             <div
               class="h-48 lg:w-48 flex-none bg-cover text-center overflow-hidden opacity-75"
               style="
-                background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+                background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
               "
               title="deit is very important"
             ></div>
@@ -128,11 +131,14 @@
             </div>
           </a>
 
-          <div class="rounded w-full lg:flex mb-10">
+          <div
+            v-scroll-reveal="{ delay: 350 }"
+            class="rounded w-full lg:flex mb-10"
+          >
             <div
               class="h-48 lg:w-48 flex-none bg-cover text-center overflow-hidden opacity-75"
               style="
-                background-image: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+                background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
               "
               title="deit is very important"
             ></div>
@@ -165,11 +171,14 @@
             </div>
           </div>
 
-          <div class="rounded w-full lg:flex mb-10">
+          <div
+            v-scroll-reveal="{ delay: 400 }"
+            class="rounded w-full lg:flex mb-10"
+          >
             <div
               class="h-48 lg:w-48 flex-none bg-cover text-center overflow-hidden opacity-75"
               style="
-                background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+                background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
               "
               title="deit is very important"
             ></div>
@@ -204,11 +213,11 @@
         </div>
 
         <!-- right sidebar -->
-        <div class="w-full lg:w-1/3 px-3">
+        <div v-scroll-reveal="{ delay: 200 }" class="w-full lg:w-1/3 px-3">
           <!-- topics -->
           <div class="mb-4">
             <h5 class="font-bold text-lg uppercase text-gray-700 px-1 mb-2">
-              Popular Topics
+              Category
             </h5>
             <ul>
               <li
@@ -268,26 +277,6 @@
 
           <!-- divider -->
           <div class="border border-dotted"></div>
-
-          <!-- subscribe -->
-          <div class="p-1 mt-4 mb-4">
-            <h5 class="font-bold text-lg uppercase text-gray-700 mb-2">
-              Subscribe
-            </h5>
-            <p class="text-gray-600">
-              Subscribe to our newsletter. We deliver the best health related
-              articles to your inbox
-            </p>
-            <input
-              placeholder="your email address"
-              class="text-gray-700 bg-gray-100 rounded-t hover:outline-none p-2 w-full mt-4 border"
-            />
-            <button
-              class="px-4 py-2 bg-indigo-600 text-gray-200 rounded-b w-full capitalize tracking-wide"
-            >
-              Subscribe
-            </button>
-          </div>
 
           <!-- divider -->
           <div class="border border-dotted"></div>

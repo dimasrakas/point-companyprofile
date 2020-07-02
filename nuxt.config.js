@@ -53,6 +53,27 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            name: 'Italiano',
+            code: 'it',
+            iso: 'it-IT',
+            file: 'it-IT.js',
+          },
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en-US.js',
+          },
+        ],
+        langDir: 'lang/',
+        defaultLocale: 'it',
+      },
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content

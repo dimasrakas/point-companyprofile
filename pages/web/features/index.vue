@@ -85,7 +85,7 @@
             </p>
           </nuxt-link>
           <nuxt-link
-            to="/web/features/manufacture"
+            to="/web/features/navigation"
             class="p-4 md:w-1/3 sm:mb-0 mb-6"
           >
             <div class="rounded-lg overflow-hidden">

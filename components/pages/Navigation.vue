@@ -18,8 +18,9 @@
             }"
             class="inline-block py-1 md:py-4 text-gray-500 mr-6 font-medium"
             @click="activeTab = 1"
-            >Home</nuxt-link
           >
+            {{ $t('hello') }}
+          </nuxt-link>
           <nuxt-link
             to="/web/features"
             :class="{
@@ -74,11 +75,12 @@
         <a
           href="#"
           class="inline-block py-1 md:py-4 text-gray-500 hover:text-gray-600 mr-6"
-          >Indonesia</a
         >
+          {{ id.lang }} {{ $store.state.lang }}
+        </a>
         <a
-          href="#"
           class="inline-block py-2 px-4 text-white font-semibold bg-blue-500 hover:bg-blue-600 rounded-lg"
+          @click="$store.commit('changeEN')"
         >
           Try Free trial
         </a>
@@ -92,6 +94,12 @@ export default {
   data() {
     return {
       activeTab: [],
+      id: {
+        lang: 'Indonesia',
+      },
+      en: {
+        lang: 'English',
+      },
     }
   },
 }

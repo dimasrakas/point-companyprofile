@@ -10,7 +10,7 @@
           />
         </div>
         <h2 class="title-font text-3xl font-semibold text-gray-900 mt-6 mb-3">
-          Creating Invoice
+          Creating Invoice Manufacture
         </h2>
         <p class="leading-relaxed text-base">
           Williamsburg occupy sustainable snackwave gochujang. Pinterest
