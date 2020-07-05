@@ -8,20 +8,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins'],
+        sans: ['Metropolis'],
         serif: ['Source Serif Pro'],
         mono: ['Source Code Pro'],
-        display: ['Signifika', 'sans-serif'],
-        body: ['Montserrat', 'sans-serif'],
-        header: ['Signifika', 'sans-serif'],
+        header: ['Metropolis', 'sans-serif'],
+        description: ['Inter', 'sans-serif'],
       },
       colors: {
         dark: '#172b4d',
-        primary: '#0052CC',
-        secondary: '#253858',
+        primary: '#1e8e42',
+        secondary: '#718096',
         light: '#f4f5f7',
-        light2: '#F4F5F9',
-        blues: '#006ee5',
       },
     },
   },

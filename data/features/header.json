@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "slug": "service",
+    "lang": "id",
+    "name": "Service",
+    "description": "YOU SELL YOUR SKILL",
+    "image": ""
+  },
+  {
+    "id": "2",
+    "slug": "trading",
+    "lang": "id",
+    "name": "Trading",
+    "description": "YOU SELL A PRODUC",
+    "image": ""
+  },
+  {
+    "id": "3",
+    "slug": "manufacture",
+    "lang": "id",
+    "name": "Manufacture",
+    "description": "YOU PRODUCE THE PRODUCT",
+    "image": ""
+  }
+]

@@ -7,11 +7,12 @@ const createStore = () => {
       lang: 'id',
     },
     mutations: {
-      changeID(state) {
-        state.lang = 'id'
-      },
-      changeEN(state) {
-        state.lang = 'eng'
+      changeLanguange(state) {
+        if (state.lang === 'id') {
+          state.lang = 'en'
+        } else {
+          state.lang = 'id'
+        }
       },
     },
   })
