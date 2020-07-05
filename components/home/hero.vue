@@ -39,8 +39,14 @@
                 v-scroll-reveal="{ delay: 300 }"
                 to="/"
                 class="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg shadow"
-                >Free Trial 1 Month</nuxt-link
               >
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.subheading }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.subheading }}
+                </span>
+              </nuxt-link>
             </div>
             <div class="md:w-1/2 relative">
               <div class="hidden md:block">
@@ -49,40 +55,19 @@
                   class="-ml-20 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
                   style="transform: rotate(-8deg);"
                 >
-                  <div
-                    class="bg-green-500 mx-auto rounded-lg px-2 pb-2 relative mb-8"
-                  >
-                    <div class="mb-1">
-                      <span
-                        class="w-1 h-1 bg-green-100 rounded-full inline-block"
-                        style="margin-right: 1px;"
-                      ></span
-                      ><span
-                        class="w-1 h-1 bg-green-100 rounded-full inline-block"
-                        style="margin-right: 1px;"
-                      ></span
-                      ><span
-                        class="w-1 h-1 bg-green-100 rounded-full inline-block"
-                      ></span>
-                    </div>
-                    <div class="h-1 w-12 bg-green-100 rounded mb-1"></div>
-                    <div class="h-1 w-10 bg-green-100 rounded mb-2"></div>
+                  <img
+                    class="py-2"
+                    src="~/assets/icon/shipping-and-delivery.svg"
+                    alt=""
+                  />
 
-                    <div class="flex">
-                      <div class="w-6 h-3 rounded bg-green-100 mr-1"></div>
-                      <div class="w-6 h-3 rounded bg-green-100"></div>
-                    </div>
-
-                    <div
-                      class="-mr-2 -mb-4 absolute bottom-0 right-0 h-16 w-10 rounded-lg bg-green-700 border-2 border-white"
-                    ></div>
-                    <div
-                      class="w-2 h-2 rounded-full bg-green-500 mx-auto absolute bottom-0 right-0 mr-2 -mb-2 z-10 border-2 border-white"
-                    ></div>
-                  </div>
-
-                  <div class="text-gray-800 text-center">
-                    Services
+                  <div class="text-gray-700 font-medium text-center">
+                    <span v-if="$store.state.lang == 'id'">
+                      {{ id.service }}
+                    </span>
+                    <span v-if="$store.state.lang == 'en'">
+                      {{ en.service }}
+                    </span>
                   </div>
                 </div>
 
@@ -91,33 +76,15 @@
                   class="ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
                   style="transform: rotate(-8deg); z-index: 2;"
                 >
-                  <div
-                    class="bg-green-500 mx-auto rounded-lg relative mb-8 py-2 w-20 border-2 border-white"
-                  >
-                    <div
-                      class="h-8 bg-green-700 w-8 rounded absolute left-0 top-0 -mt-3 ml-4"
-                      style="transform: rotate(-45deg); z-index: -1;"
-                    ></div>
-                    <div
-                      class="h-8 bg-green-500 w-8 rounded absolute left-0 top-0 -mt-3 ml-8"
-                      style="transform: rotate(-12deg); z-index: -2;"
-                    ></div>
+                  <img class="py-2" src="~/assets/icon/container.svg" alt="" />
 
-                    <div
-                      class="flex items-center justify-center h-6 bg-green-500 w-6 rounded-l-lg ml-auto border-4 border-white -mr-1"
-                    >
-                      <div
-                        class="h-2 w-2 rounded-full bg-green-500 border-2 border-white"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="w-8 h-8 bg-green-700 border-4 border-white rounded-full -ml-3 -mb-5"
-                    ></div>
-                  </div>
-
-                  <div class="text-gray-800 text-center">
-                    Trading
+                  <div class="text-gray-700 font-medium text-center">
+                    <span v-if="$store.state.lang == 'id'">
+                      {{ id.trading }}
+                    </span>
+                    <span v-if="$store.state.lang == 'en'">
+                      {{ en.trading }}
+                    </span>
                   </div>
                 </div>
 
@@ -130,30 +97,19 @@
                     margin-bottom: -220px;
                   "
                 >
-                  <div
-                    class="bg-green-500 mx-auto rounded-lg pt-4 mb-16 relative"
-                  >
-                    <div class="h-4 bg-white"></div>
+                  <img
+                    class="py-2"
+                    src="~/assets/icon/shipping-and-delivery(1).svg"
+                    alt=""
+                  />
 
-                    <div class="text-right my-2 pb-1">
-                      <div
-                        class="inline-flex w-3 h-3 rounded-full bg-white -mr-2"
-                      ></div>
-                      <div
-                        class="inline-flex w-3 h-3 rounded-full bg-green-500 border-2 border-white mr-2"
-                      ></div>
-                    </div>
-
-                    <div
-                      class="-ml-4 -mb-6 absolute left-0 bottom-0 w-16 bg-green-700 mx-auto rounded-lg pb-2 pt-3"
-                    >
-                      <div class="h-2 bg-white mb-2"></div>
-                      <div class="h-2 bg-white w-6 ml-auto rounded mr-2"></div>
-                    </div>
-                  </div>
-
-                  <div class="text-gray-800 text-center">
-                    Manufacture
+                  <div class="text-gray-700 font-medium text-center">
+                    <span v-if="$store.state.lang == 'id'">
+                      {{ id.manufacture }}
+                    </span>
+                    <span v-if="$store.state.lang == 'en'">
+                      {{ en.manufacture }}
+                    </span>
                   </div>
                 </div>
 
@@ -172,7 +128,12 @@
                       v-scroll-reveal="{ delay: 550 }"
                       class="text-lg text-gray-700 font-bold mb-3"
                     >
-                      Welcome back, Dimas
+                      <span v-if="$store.state.lang == 'id'">
+                        {{ id.welcome }}
+                      </span>
+                      <span v-if="$store.state.lang == 'en'">
+                        {{ en.welcome }}
+                      </span>
                     </h2>
                     <div v-scroll-reveal="{ delay: 600 }" class="flex mb-5">
                       <div class="w-16 rounded-full bg-gray-100 py-2 px-4 mr-2">
@@ -232,7 +193,12 @@
                       v-scroll-reveal="{ delay: 700 }"
                       class="text-lg text-gray-700 font-bold mb-3"
                     >
-                      This is your Dashboard
+                      <span v-if="$store.state.lang == 'id'">
+                        {{ id.dashboard }}
+                      </span>
+                      <span v-if="$store.state.lang == 'en'">
+                        {{ en.dashboard }}
+                      </span>
                     </h2>
 
                     <div
@@ -547,6 +513,11 @@ export default {
         description:
           'Covers all the features you need to run a small or medium business. Exceptional accounting and bookkeeping solutions in the most demanding era.',
         button: 'Coba Gratis',
+        service: 'Jasa',
+        trading: 'Dagang',
+        manufacture: 'Manufaktur',
+        welcome: 'Selamat Datang kembali, Dimas',
+        dashboard: 'Ini adalah papan kendali anda',
       },
       en: {
         heading: 'Fully control your business <br> while on the go',
@@ -554,6 +525,11 @@ export default {
         description:
           'Covers all the features you need to run a small or medium business. Exceptional accounting and bookkeeping solutions in the most demanding era.',
         button: 'Try Free',
+        service: 'Service',
+        trading: 'Trading',
+        manufacture: 'Manufacture',
+        welcome: 'Welcome back, Dimas',
+        dashboard: ' This is your Dashboard',
       },
     }
   },
