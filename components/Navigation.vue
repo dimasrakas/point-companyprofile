@@ -12,8 +12,9 @@
         <nuxt-link
           to="/"
           class="inline-block py-2 text-dark text-2xl font-extrabold"
-          >Point.RED</nuxt-link
         >
+          <img class="h-10" src="~/assets/icon/point-logo.png" alt="" />
+        </nuxt-link>
         <div class="inline-block cursor-pointer md:hidden">
           <div class="bg-gray-400 w-8 mb-2" style="height: 2px;"></div>
           <div class="bg-gray-400 w-8 mb-2" style="height: 2px;"></div>

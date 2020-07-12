@@ -3,8 +3,10 @@ import Vuex from 'vuex'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      counter: 0,
-      lang: 'id',
+      lang: 'en',
+      featureHeader: '',
+      featureSubHeader: '',
+      featureDetail: '',
     },
     mutations: {
       changeLanguange(state) {

@@ -1,126 +1,134 @@
 <template>
   <section class="bg-gray-100">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -mx-4 -mb-10 text-center">
-        <div class="sm:w-1/2 mb-10 px-4">
-          <div
-            v-scroll-reveal="{ delay: 200 }"
-            class="rounded-lg h-64 overflow-hidden"
+    <div
+      class="container mx-auto flex px-5 mt-24 md:flex-row flex-col items-center"
+    >
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img
+          v-scroll-reveal="{ delay: 250 }"
+          class="object-cover object-center rounded"
+          alt="hero"
+          src="~/assets/illustration/green2.png"
+        />
+      </div>
+      <div
+        class="lg:flex-grow md:w-1/2 flex flex-col md:items-end md:text-left mb-16 md:mb-0 items-center text-center"
+      >
+        <h1
+          v-scroll-reveal="{ delay: 200 }"
+          class="sm:text-4xl text-3xl mb-4 font-bold leading-tight text-dark text-right"
+        >
+          <span v-if="$store.state.lang == 'en'" v-html="en.heading1">
+            {{ en.heading1 }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.heading1 }}
+          </span>
+        </h1>
+        <p
+          v-scroll-reveal="{ delay: 250 }"
+          class="mb-8 text-xl leading-relaxed font-description text-secondary"
+        >
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.subheading1 }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.subheading1 }}
+          </span>
+        </p>
+        <div
+          v-scroll-reveal="{ delay: 300 }"
+          class="flex justify-center mt-6 py-2"
+        >
+          <nuxt-link
+            to="/features"
+            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded font-semibold text-lg"
           >
-            <img
-              alt="content"
-              class="object-cover object-center h-full w-full"
-              src="~/assets/illustration/green2.png"
-            />
-          </div>
-          <h2
-            v-scroll-reveal="{ delay: 250 }"
-            class="text-3xl font-bold text-dark mt-6 mb-3 leading-none"
-          >
-            <span v-if="$store.state.lang == 'en'" v-html="en.heading1">
-              {{ en.heading1 }}
-            </span>
-            <span v-if="$store.state.lang == 'id'">
-              {{ id.heading1 }}
-            </span>
-          </h2>
-          <p class="leading-relaxed text-lg text-secondary">
             <span v-if="$store.state.lang == 'en'">
-              {{ en.subheading1 }}
+              {{ en.tryfree1 }}
             </span>
             <span v-if="$store.state.lang == 'id'">
-              {{ id.subheading1 }}
+              {{ id.tryfree1 }}
             </span>
-          </p>
-          <div
-            v-scroll-reveal="{ delay: 300 }"
-            class="flex justify-center mt-6 py-2"
+          </nuxt-link>
+          <nuxt-link
+            to="/show/financial"
+            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
           >
-            <nuxt-link
-              to="/features"
-              class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded font-semibold text-lg"
-            >
-              <span v-if="$store.state.lang == 'en'">
-                {{ en.tryfree1 }}
-              </span>
-              <span v-if="$store.state.lang == 'id'">
-                {{ id.tryfree1 }}
-              </span>
-            </nuxt-link>
-            <nuxt-link
-              to="/show/time"
-              class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
-            >
-              <span v-if="$store.state.lang == 'en'">
-                {{ en.showme1 }}
-              </span>
-              <span v-if="$store.state.lang == 'id'">
-                {{ id.showme1 }}
-              </span>
-            </nuxt-link>
-          </div>
+            <span v-if="$store.state.lang == 'en'">
+              {{ en.showme1 }}
+            </span>
+            <span v-if="$store.state.lang == 'id'">
+              {{ id.showme1 }}
+            </span>
+          </nuxt-link>
         </div>
-        <div class="sm:w-1/2 mb-10 px-4">
-          <div
-            v-scroll-reveal="{ delay: 200 }"
-            class="rounded-lg h-64 overflow-hidden"
-          >
-            <img
-              alt="content"
-              class="object-cover object-center h-full w-full"
-              src="~/assets/illustration/vesa.png"
-            />
-          </div>
-          <h2
-            v-scroll-reveal="{ delay: 250 }"
-            class="text-3xl font-bold text-dark mt-6 mb-3 leading-none"
+      </div>
+    </div>
+
+    <div
+      class="container mx-auto flex px-5 mt-24 mb-24 md:flex-row flex-col items-center"
+    >
+      <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+      >
+        <h1
+          v-scroll-reveal="{ delay: 200 }"
+          class="title-font sm:text-4xl text-3xl mb-4 font-bold leading-tight text-gray-900"
+        >
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.heading2 }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.heading2 }}
+          </span>
+        </h1>
+        <p
+          v-scroll-reveal="{ delay: 250 }"
+          class="mb-8 text-xl leading-relaxed font-description text-secondary"
+        >
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.subheading2 }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.subheading2 }}
+          </span>
+        </p>
+        <div
+          v-scroll-reveal="{ delay: 350 }"
+          class="flex justify-center mt-6 py-2"
+        >
+          <nuxt-link
+            to="/features"
+            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 font-semibold rounded text-lg"
           >
             <span v-if="$store.state.lang == 'en'">
-              {{ en.heading2 }}
+              {{ en.tryfree2 }}
             </span>
             <span v-if="$store.state.lang == 'id'">
-              {{ id.heading2 }}
+              {{ id.tryfree2 }}
             </span>
-          </h2>
-          <p
-            v-scroll-reveal="{ delay: 300 }"
-            class="leading-relaxed text-lg text-secondary"
+          </nuxt-link>
+          <nuxt-link
+            to="/show/vesa"
+            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
           >
             <span v-if="$store.state.lang == 'en'">
-              {{ en.subheading2 }}
+              {{ en.showme2 }}
             </span>
             <span v-if="$store.state.lang == 'id'">
-              {{ id.subheading2 }}
+              {{ id.showme2 }}
             </span>
-          </p>
-          <div
-            v-scroll-reveal="{ delay: 350 }"
-            class="flex justify-center mt-6 py-2"
-          >
-            <nuxt-link
-              to="/features"
-              class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 font-semibold rounded text-lg"
-            >
-              <span v-if="$store.state.lang == 'en'">
-                {{ en.tryfree2 }}
-              </span>
-              <span v-if="$store.state.lang == 'id'">
-                {{ id.tryfree2 }}
-              </span>
-            </nuxt-link>
-            <nuxt-link
-              to="/show/vesa"
-              class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
-            >
-              <span v-if="$store.state.lang == 'en'">
-                {{ en.showme2 }}
-              </span>
-              <span v-if="$store.state.lang == 'id'">
-                {{ id.showme2 }}
-              </span>
-            </nuxt-link>
-          </div>
+          </nuxt-link>
         </div>
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img
+          v-scroll-reveal="{ delay: 250 }"
+          class="object-cover object-center rounded"
+          alt="hero"
+          src="~/assets/illustration/vesa.png"
+        />
       </div>
     </div>
   </section>

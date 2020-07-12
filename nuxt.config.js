@@ -34,7 +34,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['~/plugins/global.js'],
+  plugins: ['~/plugins/global.js', '~plugins/vue-js-modal.js'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

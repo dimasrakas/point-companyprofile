@@ -8,89 +8,63 @@
           v-scroll-reveal="{ delay: 250 }"
           class="title-font sm:text-4xl text-4xl font-bold text-gray-900"
         >
-          Tell us your business
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.heading }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.heading }}
+          </span>
         </h1>
-        <p
-          v-scroll-reveal="{ delay: 300 }"
-          class="mb-8 text-lg leading-relaxed"
-        >
-          To get started, tell us a bit about you and what you need. We'll show
-          you how Point ERP best suits your needs.
+        <p v-scroll-reveal="{ delay: 300 }" class="text-lg leading-relaxed">
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.subheading }}
+          </span>
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.subheading }}
+          </span>
         </p>
       </div>
     </div>
     <div class="container mb-48 mx-auto">
       <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        <nuxt-link to="/features/detail" class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg overflow-hidden">
+        <nuxt-link
+          v-for="data in featureHeaders"
+          :key="data.id"
+          :to="{ name: 'features-d-id___it', params: { id: data.id } }"
+          class="p-4 md:w-1/3 sm:mb-0 mb-6 flex flex-col justify-center pop"
+        >
+          <div class="">
             <img
               v-scroll-reveal="{ delay: 350 }"
               alt="content"
-              class="shadow-lg h-full w-full"
-              src="~/assets/images/features-split-top-03 (3).png"
+              class="h-48 w-full mb-4"
+              :src="
+                'http://private.server.dimasrakas.com/illustration/' +
+                data.image
+              "
             />
           </div>
           <h2
             v-scroll-reveal="{ delay: 350 }"
-            class="text-3xl font-bold title-font text-gray-900 mt-5"
+            class="text-3xl font-bold title-font text-gray-900 text-center"
           >
-            SERVICE
+            <span v-if="$store.state.lang == 'en'">
+              {{ data.name_lang.en }}
+            </span>
+            <span v-if="$store.state.lang == 'id'">
+              {{ data.name_lang.id }}
+            </span>
           </h2>
           <p
             v-scroll-reveal="{ delay: 400 }"
-            class="text-base leading-relaxed mt-2"
+            class="text-base leading-relaxed mt-2 text-center"
           >
-            Swag shoivdigoitch literally meditation subway tile tumblr
-            cold-pressed. Gastropub street art beard dreamcatcher neutra,
-            ethical XOXO lumbersexual.
-          </p>
-        </nuxt-link>
-        <nuxt-link to="/features/detail" class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg overflow-hidden">
-            <img
-              v-scroll-reveal="{ delay: 450 }"
-              alt="content"
-              class="shadow-lg h-full w-full"
-              src="~/assets/images/features-split-top-02 (3).png"
-            />
-          </div>
-          <h2
-            v-scroll-reveal="{ delay: 500 }"
-            class="text-3xl font-bold title-font text-gray-900 mt-5"
-          >
-            TRADING
-          </h2>
-          <p
-            v-scroll-reveal="{ delay: 550 }"
-            class="text-base leading-relaxed mt-2"
-          >
-            Swag shoivdigoitch literally meditation subway tile tumblr
-            cold-pressed. Gastropub street art beard dreamcatcher neutra,
-            ethical XOXO lumbersexual.
-          </p>
-        </nuxt-link>
-        <nuxt-link to="/features/detail" class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg overflow-hidden">
-            <img
-              v-scroll-reveal="{ delay: 650 }"
-              alt="content"
-              class="shadow-lg h-full w-full"
-              src="~/assets/images/features-split-top-02 (3).png"
-            />
-          </div>
-          <h2
-            v-scroll-reveal="{ delay: 700 }"
-            class="text-3xl font-bold title-font text-gray-900 mt-5"
-          >
-            MANUFACTURE
-          </h2>
-          <p
-            v-scroll-reveal="{ delay: 750 }"
-            class="text-base leading-relaxed mt-2"
-          >
-            Swag shoivdigoitch literally meditation subway tile tumblr
-            cold-pressed. Gastropub street art beard dreamcatcher neutra,
-            ethical XOXO lumbersexual.
+            <span v-if="$store.state.lang == 'en'">
+              {{ data.description_lang.en }}
+            </span>
+            <span v-if="$store.state.lang == 'id'">
+              {{ data.description_lang.id }}
+            </span>
           </p>
         </nuxt-link>
       </div>
@@ -99,7 +73,49 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      en: {
+        heading: 'Tell us your business',
+        subheading:
+          'To get started, tell us a bit about you and what you need. Well show you how Point ERP best suits your needs.',
+        description: '',
+        tryfree: '',
+        showme: '',
+      },
+      id: {
+        heading: 'Apa bisnis anda?',
+        subheading:
+          'Beri kami sedikit info tentang anda dan yang anda perlukan. Kami akan menunjukkan bagaimana Point ERP memenuhi kebutuhan anda',
+        description: '',
+        tryfree: '',
+        showme: '',
+      },
+      featureHeaders: [],
+    }
+  },
+
+  mounted() {
+    this.getData()
+  },
+
+  methods: {
+    async getData() {
+      try {
+        const response = await this.$axios.get(
+          'https://admin.point.dimasrakas.com/api/v1/feature/header'
+        )
+
+        if (response.status === 200) {
+          this.featureHeaders = response.data
+        }
+      } catch (e) {
+        console.log(this.response.error)
+      }
+    },
+  },
+}
 </script>
 
 <style></style>
