@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: 'Metropolis';
   font-style: normal;
   font-weight: 400;
@@ -105,4 +105,4 @@
   font-style: italic;
   font-weight: 900;
   src: local('Metropolis'), url('https://fonts.cdnfonts.com/s/16308/Metropolis-BlackItalic.woff') format('woff');
-} */
+}
