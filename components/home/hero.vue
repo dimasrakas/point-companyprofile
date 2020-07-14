@@ -37,7 +37,7 @@
 
               <nuxt-link
                 v-scroll-reveal="{ delay: 300 }"
-                to="/"
+                to="/features"
                 class="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg shadow"
               >
                 <span v-if="$store.state.lang == 'id'">
@@ -76,7 +76,7 @@
                   class="ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
                   style="transform: rotate(-8deg); z-index: 2;"
                 >
-                  <img class="py-2" src="~/assets/icon/container.svg" alt="" />
+                  <img class="py-2" src="~/assets/icon/store.svg" alt="" />
 
                   <div class="text-gray-700 font-medium text-center">
                     <span v-if="$store.state.lang == 'id'">

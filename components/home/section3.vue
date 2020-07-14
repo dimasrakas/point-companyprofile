@@ -21,18 +21,18 @@
           <span v-if="$store.state.lang == 'en'" v-html="en.heading1">
             {{ en.heading1 }}
           </span>
-          <span v-if="$store.state.lang == 'id'">
+          <span v-if="$store.state.lang == 'id'" v-html="id.heading1">
             {{ id.heading1 }}
           </span>
         </h1>
         <p
           v-scroll-reveal="{ delay: 250 }"
-          class="mb-8 text-xl leading-relaxed font-description text-secondary"
+          class="mb-8 text-xl leading-relaxed font-description text-secondary text-right"
         >
-          <span v-if="$store.state.lang == 'en'">
+          <span v-if="$store.state.lang == 'en'" v-html="en.subheading1">
             {{ en.subheading1 }}
           </span>
-          <span v-if="$store.state.lang == 'id'">
+          <span v-if="$store.state.lang == 'id'" v-html="id.subheading1">
             {{ id.subheading1 }}
           </span>
         </p>
@@ -76,10 +76,10 @@
           v-scroll-reveal="{ delay: 200 }"
           class="title-font sm:text-4xl text-3xl mb-4 font-bold leading-tight text-gray-900"
         >
-          <span v-if="$store.state.lang == 'en'">
+          <span v-if="$store.state.lang == 'en'" v-html="en.heading2">
             {{ en.heading2 }}
           </span>
-          <span v-if="$store.state.lang == 'id'">
+          <span v-if="$store.state.lang == 'id'" v-html="id.heading2">
             {{ id.heading2 }}
           </span>
         </h1>
@@ -142,21 +142,24 @@ export default {
         heading1:
           'Time to put your business <br class="hidden lg:inline-block" /> out there',
         subheading1:
-          'Instantly market yourself with our peer to peer marketplace hub',
+          'Instantly market yourself with our <br class="hidden lg:inline-block" /> peer to peer marketplace hub',
         tryfree1: 'Try Free',
         showme1: 'Show me how',
-        heading2: 'Want your own personal assistant? VESA have you covered',
+        heading2:
+          'Want your own personal assistant? <br class="hidden lg:inline-block" /> VESA have you covered',
         subheading2: 'We got the royalty no. xxxxx for this feature',
         tryfree2: 'Try Free',
         showme2: 'Show me how',
       },
       id: {
-        heading1: 'Waktunya untuk memperluas jaringan bisnis anda',
+        heading1:
+          'Waktunya untuk memperluas <br class="hidden lg:inline-block" /> jaringan bisnis anda',
         subheading1:
-          'Promosikan bisnis anda secara instan dengan fitur marketplace hub dari Point',
+          'Promosikan bisnis anda secara instan <br class="hidden lg:inline-block" /> dengan fitur marketplace hub dari Point',
         tryfree1: 'Coba Gratis',
         showme1: 'Selengkapnya',
-        heading2: 'Ingin Asisten Pribadi? VESA adalah jawabannya',
+        heading2:
+          'Ingin Asisten Pribadi? <br class="hidden lg:inline-block" /> VESA adalah jawabannya',
         subheading2: 'Kami terdaftar dalam hak cipta *****',
         tryfree2: 'Coba Gratis',
         showme2: 'Selengkapnya',

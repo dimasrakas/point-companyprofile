@@ -1,16 +1,16 @@
 <template>
   <section class="text-gray-700 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col text-center w-full mb-20">
+      <div class="flex flex-col text-center w-full mb-24">
         <h1
           v-scroll-reveal="{ delay: 200 }"
-          class="sm:text-4xl text-3xl font-bold title-font mb-2 text-dark"
+          class="sm:text-4xl text-3xl font-bold font-heading mb-2 text-dark"
         >
           Pricing
         </h1>
         <p
           v-scroll-reveal="{ delay: 250 }"
-          class="lg:w-2/3 mx-auto leading-relaxed text-base"
+          class="lg:w-2/3 mx-auto leading-relaxed text-lg font-subheading"
         >
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
         </p>
@@ -23,7 +23,7 @@
           <div
             class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
           >
-            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
+            <h2 class="text-sm tracking-widest font-heading mb-1 font-medium">
               BASIC
             </h2>
             <h1
@@ -116,7 +116,7 @@
               class="bg-green-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl"
               >POPULAR</span
             >
-            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
+            <h2 class="text-sm tracking-widest font-heading mb-1 font-medium">
               PRO
             </h2>
             <h1
@@ -205,7 +205,7 @@
           <div
             class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
           >
-            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
+            <h2 class="text-sm tracking-widest font-heading mb-1 font-medium">
               PREMIUM
             </h2>
             <h1

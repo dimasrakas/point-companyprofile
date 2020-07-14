@@ -10,7 +10,7 @@
           class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
         >
           <img
-            class="h-10 w-10"
+            class="h-20 w-20"
             src="~/assets/icon/point-logo-circle.png"
             alt=""
           />
@@ -32,10 +32,16 @@
           </h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Features</a>
+              <nuxt-link
+                to="/features"
+                class="text-gray-600 hover:text-gray-800"
+                >Features</nuxt-link
+              >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Pricing</a>
+              <nuxt-link to="/pricing" class="text-gray-600 hover:text-gray-800"
+                >Pricing</nuxt-link
+              >
             </li>
             <li>
               <a class="text-gray-600 hover:text-gray-800">Developer</a>
@@ -53,13 +59,21 @@
           </h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">About</a>
+              <nuxt-link to="/about" class="text-gray-600 hover:text-gray-800"
+                >About</nuxt-link
+              >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Blog</a>
+              <nuxt-link to="/blog" class="text-gray-600 hover:text-gray-800"
+                >Blog</nuxt-link
+              >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Github</a>
+              <a
+                href="https://github.com/point-red"
+                class="text-gray-600 hover:text-gray-800"
+                >Github</a
+              >
             </li>
             <li>
               <a class="text-gray-600 hover:text-gray-800">Become Partner</a>
@@ -80,7 +94,9 @@
               <a class="text-gray-600 hover:text-gray-800">Help Center</a>
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Contact</a>
+              <nuxt-link to="/contact" class="text-gray-600 hover:text-gray-800"
+                >Contact</nuxt-link
+              >
             </li>
             <li>
               <a class="text-gray-600 hover:text-gray-800">Privacy</a>
@@ -103,7 +119,7 @@
             rel="noopener noreferrer"
             class="text-gray-600 ml-1"
             target="_blank"
-            >@dimasrakas</a
+            >@ Point</a
           >
         </p>
         <span

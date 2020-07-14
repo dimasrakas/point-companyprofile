@@ -1,6 +1,6 @@
 <template>
-  <section class="text-gray-700 body-font relative">
-    <div class="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
+  <section>
+    <div class="container px-5 py-48 mx-auto flex sm:flex-no-wrap flex-wrap">
       <div
         v-scroll-reveal.reset="{ delay: 200 }"
         class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
@@ -53,29 +53,6 @@
         </h2>
         <p class="leading-relaxed mb-5 text-secondary">
           Point Jl. Musi 21, Surabaya email : Pointred017@gmail.com
-        </p>
-        <input
-          class="bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
-          placeholder="Name"
-          type="text"
-        />
-        <input
-          class="bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
-          placeholder="Email"
-          type="email"
-        />
-        <textarea
-          class="bg-white rounded border border-gray-400 focus:outline-none h-32 focus:border-green-500 text-base px-4 py-2 mb-4 resize-none"
-          placeholder="Message"
-        ></textarea>
-        <button
-          class="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
-        >
-          Button
-        </button>
-        <p class="text-xs text-gray-500 mt-3">
-          Chicharrones blog helvetica normcore iceland tousled brook viral
-          artisan.
         </p>
       </div>
     </div>

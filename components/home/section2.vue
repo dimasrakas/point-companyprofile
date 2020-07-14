@@ -8,7 +8,7 @@
       >
         <h1
           v-scroll-reveal="{ delay: 200 }"
-          class="text-dark sm:text-4xl text-3xl mb-2 font-bold leading-tight"
+          class="text-dark sm:text-4xl text-3xl mb-2 font-bold font-heading leading-tight"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.heading }}
@@ -17,7 +17,7 @@
             {{ id.heading }}
           </span>
         </h1>
-        <h3 class="text-secondary leading-tight mb-4">
+        <h3 class="text-secondary font-subheading leading-tight mb-4">
           <span v-if="$store.state.lang == 'en'">
             {{ en.subheading }}
           </span>
@@ -27,7 +27,7 @@
         </h3>
         <p
           v-scroll-reveal="{ delay: 250 }"
-          class="text-secondary mb-8 leading-relaxed"
+          class="text-secondary font-description mb-8 leading-relaxed"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.description }}

@@ -41,6 +41,7 @@
       </div>
     </modal>
 
+    <!-- Navigation -->
     <div class="container mx-auto flex items-center justify-end">
       <div class="flex flex-col justify-end">
         <h5>You can change your choice later by clicking this button</h5>
@@ -54,28 +55,34 @@
       </div>
     </div>
 
+    <!-- Heading Sub Heading -->
     <div
       class="container mx-auto flex items-center justify-center flex-col mb-10"
     >
-      <h1 class="font-header font-bold">
-        <span v-if="$store.state.lang == 'en'">
-          {{ headerString.en }}
-        </span>
-        <span v-if="$store.state.lang == 'id'">
-          {{ headerString.id }}
-        </span>
+      <h1 class="title-font sm:text-4xl text-4xl font-header font-bold">
+        <span v-if="$store.state.lang == 'en'">{{ headerString.en }}</span>
+        <span v-if="$store.state.lang == 'id'">{{ headerString.id }}</span>
       </h1>
-      <h6 class="font-description text-center">
-        <span v-if="$store.state.lang == 'en'">
-          {{ en.subheading }}
-        </span>
-        <span v-if="$store.state.lang == 'id'">
-          {{ id.subheading }}
-        </span>
+      <h6 class="text-lg leading-relaxed font-description text-center">
+        <span v-if="$store.state.lang == 'en'">{{ en.subheading }}</span>
+        <span v-if="$store.state.lang == 'id'">{{ id.subheading }}</span>
       </h6>
     </div>
 
-    <div class="container px-5 mx-auto">
+    <div v-if="loading" class="container mx-auto flex flex-wrap">
+      <div v-for="data in 6" :key="data.id" class="xl:w-1/4 md:w-1/2 p-4">
+        <div class="bg-white shadow-lg p-4">
+          <vue-content-loading :width="300" :height="300">
+            <rect y="0" rx="4" ry="4" width="300" height="100" />
+            <rect y="120" rx="4" ry="4" width="300" height="20" />
+            <rect y="150" rx="4" ry="4" width="180" height="20" />
+          </vue-content-loading>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="!loading" class="container px-5 mx-auto">
+      <!-- Feature Sub Header -->
       <div
         v-if="showFeatureSubHeaders === true"
         class="flex flex-wrap -mx-4 -mb-10 text-center"
@@ -83,39 +90,44 @@
         <div
           v-for="subheader in featureSubHeaders"
           :key="subheader.id"
-          class="sm:w-1/2 mb-10 px-4 pop cursor-pointer"
+          class="sm:w-1/2 mb-10 px-10 rounded-lg cursor-pointer"
           @click="detailSelected(subheader.id)"
         >
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img
-              alt="content"
-              class="object-cover object-center h-full w-full"
-              :src="
-                'http://private.server.dimasrakas.com/illustration/' +
-                subheader.image +
-                '.svg'
-              "
-            />
+          <div
+            class="border rounded-lg h-full w-full p-4 pop cursor-pointer hover:bg-green-500 hover:text-white"
+          >
+            <div class="rounded-lg h-48 overflow-hidden">
+              <img
+                alt="content"
+                class="h-48 w-full"
+                :src="
+                  'http://private.server.dimasrakas.com/illustration/' +
+                  subheader.image +
+                  '.svg'
+                "
+              />
+            </div>
+            <h2 class="title-font text-3xl font-semibold mt-6 mb-3">
+              <span v-if="$store.state.lang == 'en'">{{
+                subheader.name_lang.en
+              }}</span>
+              <span v-if="$store.state.lang == 'id'">{{
+                subheader.name_lang.id
+              }}</span>
+            </h2>
+            <p class="leading-relaxed text-base">
+              <span v-if="$store.state.lang == 'en'">
+                {{ subheader.description_lang.en }}
+              </span>
+              <span v-if="$store.state.lang == 'id'">
+                {{ subheader.description_lang.id }}
+              </span>
+            </p>
           </div>
-          <h2 class="title-font text-3xl font-semibold text-gray-900 mt-6 mb-3">
-            <span v-if="$store.state.lang == 'en'">{{
-              subheader.name_lang.en
-            }}</span>
-            <span v-if="$store.state.lang == 'id'">{{
-              subheader.name_lang.id
-            }}</span>
-          </h2>
-          <p class="leading-relaxed text-base">
-            <span v-if="$store.state.lang == 'en'">
-              {{ subheader.description_lang.en }}
-            </span>
-            <span v-if="$store.state.lang == 'id'">
-              {{ subheader.description_lang.id }}
-            </span>
-          </p>
         </div>
       </div>
 
+      <!-- Feature Detail -->
       <div
         v-if="showFeatureDetails === true"
         class="flex flex-wrap -mx-4 text-center"
@@ -127,6 +139,7 @@
         >
           <div
             class="border rounded-lg h-full w-full p-4 pop cursor-pointer hover:bg-green-500 hover:text-white"
+            @click="actionLogin()"
           >
             <div class="rounded-lg h-48 overflow-hidden">
               <img
@@ -163,7 +176,12 @@
 </template>
 
 <script>
+import { VueContentLoading } from 'vue-content-loading'
+
 export default {
+  components: {
+    VueContentLoading,
+  },
   data() {
     return {
       en: {
@@ -196,6 +214,7 @@ export default {
       featureSubHeaders: [],
       showFeatureDetails: false,
       featureDetails: [],
+      loading: true,
     }
   },
 
@@ -206,6 +225,9 @@ export default {
   },
 
   methods: {
+    actionLogin() {
+      window.location = 'https://cloud.point.red'
+    },
     show() {
       this.$modal.show('feature-modal')
     },
@@ -260,6 +282,7 @@ export default {
 
     // Get Data Sub Header
     async getSubHeader() {
+      this.loading = true
       try {
         const response = await this.$axios.get(
           'https://admin.point.dimasrakas.com/api/v1/feature/header/' +
@@ -270,6 +293,7 @@ export default {
           this.featureSubHeaders = response.data
           this.optionsDetail = response.data
           this.showFeatureSubHeaders = true
+          this.loading = false
         }
       } catch (e) {
         // console.log(this.response.error)
@@ -292,6 +316,8 @@ export default {
       }
     },
     async updateSubHeader() {
+      this.loading = true
+
       try {
         const response = await this.$axios.get(
           'https://admin.point.dimasrakas.com/api/v1/feature/header/' +
@@ -302,6 +328,7 @@ export default {
           this.featureSubHeaders = response.data
           this.optionsDetail = response.data
           this.showFeatureSubHeaders = true
+          this.loading = false
         }
       } catch (e) {
         console.log(this.response.error)
@@ -309,6 +336,8 @@ export default {
     },
 
     async updateDetail() {
+      this.loading = true
+
       try {
         const response = await this.$axios.get(
           'https://admin.point.dimasrakas.com/api/v1/feature/header/subheader/' +
@@ -319,6 +348,7 @@ export default {
           this.featureDetails = response.data
           this.showFeatureSubHeaders = false
           this.showFeatureDetails = true
+          this.loading = false
         }
       } catch (e) {
         // console.log(this.response.error)

@@ -1,163 +1,219 @@
 <template>
-  <section class="py-24">
-    <div class="pb-5">
-      <div class="flex justify-center items-center">
-        <h1 class="text-dark font-bold">Beta Registration</h1>
+  <section>
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="lg:w-3/6 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+        <h1 class="font-heading font-bold text-4xl text-dark">
+          Beta Registration
+        </h1>
+        <img
+          class="mt-6"
+          src="~/assets/illustration/authentication.svg"
+          width="450"
+          alt
+        />
+      </div>
+      <div
+        class="lg:w-3/6 md:w-1/2 bg-gray-200 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+      >
+        <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
+          Form Registration
+        </h2>
+
+        <div class="flex flex-wrap -mx-2">
+          <div class="w-1/2 px-2">
+            <p class="text-gray-600">First name</p>
+            <input
+              v-model="form.firstname"
+              class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+              placeholder="First Name"
+              type="text"
+            />
+          </div>
+          <div class="w-1/2 px-2">
+            <p class="text-gray-600">Last Name</p>
+            <input
+              v-model="form.lastname"
+              class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+              placeholder="Last Name"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-wrap">
+          <p class="text-gray-600">Username</p>
+          <input
+            v-model="form.username"
+            class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+            placeholder="Username"
+            type="text"
+          />
+        </div>
+
+        <div class="flex flex-wrap mt-4">
+          <p class="text-gray-600">Email</p>
+          <input
+            v-mode="form.email"
+            class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+            placeholder="Email"
+            type="email"
+          />
+        </div>
+
+        <div class="flex flex-wrap -mx-2">
+          <div class="w-1/2 px-2">
+            <p class="text-gray-600">Password</p>
+            <input
+              v-model="form.password"
+              class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+              placeholder="Password"
+              type="password"
+            />
+          </div>
+          <div class="w-1/2 px-2">
+            <p class="text-gray-600">Password Confirmation</p>
+            <input
+              v-model="form.password_confirmation"
+              class="w-full bg-white rounded border border-gray-400 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+              placeholder="Password Confirmation"
+              type="password"
+            />
+            <p
+              v-if="form.password != form.password_confirmation"
+              class="text-red-600 font-semibold text-sm leading-none"
+            >
+              ** Pastikan ponfirmasi password sama
+            </p>
+          </div>
+        </div>
+
+        <label class="flex justify-start items-start py-2 mb-2">
+          <div
+            class="bg-white border-2 rounded border-gray-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500"
+          >
+            <input v-model="agree" type="checkbox" class="opacity-0 absolute" />
+            <svg
+              class="fill-current hidden w-4 h-4 text-green-500 pointer-events-none"
+              viewBox="0 0 20 20"
+            >
+              <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+            </svg>
+          </div>
+          <div class="select-none">I agree to Terms of Service</div>
+        </label>
+
+        <style>
+          input:checked + svg {
+            display: block;
+          }
+        </style>
+
+        <button
+          v-if="agree"
+          class="text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg"
+          @click="show()"
+        >
+          Sign Up
+        </button>
+
+        <button
+          v-if="!agree"
+          class="text-dark bg-gray-400 border-0 py-2 px-8 rounded text-lg"
+          disabled
+        >
+          Sign Up
+        </button>
+
+        <p class="text-xs text-gray-500 mt-3">
+          This site is protected by reCAPTCHA and the Google
+          <a
+            class="text-primary font-semibold"
+            href="https://policies.google.com/privacy"
+            >Privacy Policy</a
+          >
+          and
+          <a
+            class="text-primary font-semibold"
+            href="https://policies.google.com/terms"
+            >Terms of Service</a
+          >
+          apply.
+        </p>
       </div>
     </div>
-    <div class="flex container w-full mx-auto justify-center px-4">
-      <form class="w-full max-w-lg">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-full px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
-            >
-              Username
-            </label>
-            <input
-              id="grid-first-name"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              type="text"
-              placeholder="Jane"
-            />
-          </div>
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
-            >
-              First Name
-            </label>
-            <input
-              id="grid-first-name"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-              type="text"
-              placeholder="Jane"
-            />
-            <p class="text-red-500 text-xs italic">
-              Please fill out this field.
-            </p>
-          </div>
-          <div class="w-full md:w-1/2 px-3">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-last-name"
-            >
-              Last Name
-            </label>
-            <input
-              id="grid-last-name"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="text"
-              placeholder="Doe"
-            />
-          </div>
-        </div>
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full px-3">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-password"
-            >
-              Password
-            </label>
-            <input
-              id="grid-password"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="password"
-              placeholder="******************"
-            />
-            <p class="text-gray-600 text-xs italic">
-              Make it as long and as crazy as you'd like
-            </p>
-          </div>
-          <div class="w-full px-3">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-password"
-            >
-              Password Confirmation
-            </label>
-            <input
-              id="grid-password"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="password"
-              placeholder="******************"
-            />
-            <p class="text-gray-600 text-xs italic">
-              Make it as long and as crazy as you'd like
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-wrap -mx-3 mb-2">
-          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-city"
-            >
-              City
-            </label>
-            <input
-              id="grid-city"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="text"
-              placeholder="Albuquerque"
-            />
-          </div>
-          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-state"
-            >
-              State
-            </label>
-            <div class="relative">
-              <select
-                id="grid-state"
-                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              >
-                <option>New Mexico</option>
-                <option>Missouri</option>
-                <option>Texas</option>
-              </select>
-              <div
-                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-              >
-                <svg
-                  class="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-zip"
-            >
-              Zip
-            </label>
-            <input
-              id="grid-zip"
-              class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="text"
-              placeholder="90210"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
+
+    <modal
+      name="registration-modal"
+      shift-x="0.5"
+      shift-y="0.5"
+      height="80%"
+      :adaptive="true"
+    >
+      <div class="flex flex-col justify-center items-center h-full">
+        <img
+          src="~/assets/illustration/email.svg"
+          width="400"
+          height="400"
+          alt=""
+        />
+        <h1 class="text-dark">Registration Success</h1>
+        <p class="text-dark">
+          Please check your email to verify your email address
+        </p>
+
+        <button
+          class="bg-green-500 hover:bg-green-600 py-2 px-8 font-semibold text-xl rounded-lg text-white my-5"
+          @click="actionLogin()"
+        >
+          Sign In
+        </button>
+      </div>
+    </modal>
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      form: {
+        username: '',
+        first_name: '',
+        last_name: '',
+        password: '',
+        password_confirmation: '',
+        email: '',
+      },
+      agree: false,
+    }
+  },
+
+  methods: {
+    actionLogin() {
+      window.location = 'https://cloud.point.red/auth/'
+    },
+    show() {
+      this.$modal.show('registration-modal')
+      this.form = ''
+    },
+    hide() {
+      this.$modal.hide('registration-modal')
+    },
+    async storeRegister() {
+      try {
+        const response = await this.$axios.post(
+          'end point pendaftaran ? ' + this.form
+        )
+
+        if (response.status === 200) {
+          this.form = ''
+        }
+      } catch (e) {
+        console.log(e.response.error)
+      }
+    },
+  },
+}
 </script>
 
 <style></style>

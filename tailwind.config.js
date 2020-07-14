@@ -8,10 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Metropolis'],
+        sans: ['Roboto'],
         serif: ['Source Serif Pro'],
         mono: ['Source Code Pro'],
-        header: ['Metropolis', 'sans-serif'],
+        header: ['Roboto', 'sans-serif'],
+        heading: ['Roboto', 'sans-serif'],
+        subheading: ['Inter', 'sans-serif'],
         description: ['Inter', 'sans-serif'],
       },
       colors: {

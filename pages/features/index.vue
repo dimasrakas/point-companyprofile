@@ -25,7 +25,21 @@
         </p>
       </div>
     </div>
-    <div class="container mb-48 mx-auto">
+
+    <div v-if="loading" class="container mx-auto flex flex-wrap">
+      <div v-for="data in 3" :key="data.id" class="xl:w-1/3 md:w-1/2 p-4">
+        <div class="bg-white shadow-lg p-4">
+          <vue-content-loading :width="300" :height="300">
+            <rect y="0" rx="4" ry="4" width="300" height="100" />
+            <rect y="120" rx="4" ry="4" width="300" height="20" />
+            <rect y="150" rx="4" ry="4" width="300" height="20" />
+            <rect y="180" rx="4" ry="4" width="150" height="15" />
+          </vue-content-loading>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="!loading" class="container mb-48 mx-auto">
       <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
         <nuxt-link
           v-for="data in featureHeaders"
@@ -73,7 +87,12 @@
 </template>
 
 <script>
+import { VueContentLoading } from 'vue-content-loading'
+
 export default {
+  components: {
+    VueContentLoading,
+  },
   data() {
     return {
       en: {
@@ -93,6 +112,7 @@ export default {
         showme: '',
       },
       featureHeaders: [],
+      loading: true,
     }
   },
 
@@ -109,6 +129,7 @@ export default {
 
         if (response.status === 200) {
           this.featureHeaders = response.data
+          this.loading = false
         }
       } catch (e) {
         console.log(this.response.error)

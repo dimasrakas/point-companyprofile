@@ -31,7 +31,7 @@
         <div class="flex justify-center">
           <nuxt-link
             v-scroll-reveal="{ delay: 300 }"
-            to="/web/pointhub"
+            to="/about"
             class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 font-semibold rounded text-lg"
           >
             <span v-if="$store.state.lang == 'en'">
