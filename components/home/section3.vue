@@ -16,7 +16,7 @@
       >
         <h1
           v-scroll-reveal="{ delay: 200 }"
-          class="sm:text-4xl text-3xl mb-4 font-bold leading-tight text-dark text-right"
+          class="sm:text-4xl text-3xl mb-4 font-bold leading-tight text-dark text-center sm:text-center md:text-right lg:text-right"
         >
           <span v-if="$store.state.lang == 'en'" v-html="en.heading1">
             {{ en.heading1 }}
@@ -27,7 +27,7 @@
         </h1>
         <p
           v-scroll-reveal="{ delay: 250 }"
-          class="mb-8 text-xl leading-relaxed font-description text-secondary text-right"
+          class="mb-8 text-xl leading-relaxed font-description text-secondary text-center sm:text-center md:text-right lg:text-right"
         >
           <span v-if="$store.state.lang == 'en'" v-html="en.subheading1">
             {{ en.subheading1 }}
@@ -69,6 +69,15 @@
     <div
       class="container mx-auto flex px-5 mt-24 mb-24 md:flex-row flex-col items-center"
     >
+      <div v-if="$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img
+          v-scroll-reveal="{ delay: 250 }"
+          class="object-cover object-center rounded"
+          alt="hero"
+          src="~/assets/illustration/vesa.png"
+        />
+      </div>
+
       <div
         class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
       >
@@ -122,7 +131,7 @@
           </nuxt-link>
         </div>
       </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <div v-if="!$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
         <img
           v-scroll-reveal="{ delay: 250 }"
           class="object-cover object-center rounded"

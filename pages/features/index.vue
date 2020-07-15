@@ -1,7 +1,7 @@
 <template>
   <section class="py-20">
     <div
-      class="container mx-auto flex py-10 items-center justify-center flex-col"
+      class="container mx-auto flex py-10 px-2 items-center justify-center flex-col"
     >
       <div class="text-center lg:w-2/3 w-full">
         <h1
@@ -27,7 +27,11 @@
     </div>
 
     <div v-if="loading" class="container mx-auto flex flex-wrap">
-      <div v-for="data in 3" :key="data.id" class="xl:w-1/3 md:w-1/2 p-4">
+      <div
+        v-for="data in 3"
+        :key="data.id"
+        class="w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4"
+      >
         <div class="bg-white shadow-lg p-4">
           <vue-content-loading :width="300" :height="300">
             <rect y="0" rx="4" ry="4" width="300" height="100" />
@@ -45,7 +49,7 @@
           v-for="data in featureHeaders"
           :key="data.id"
           :to="{ name: 'features-d-id___it', params: { id: data.id } }"
-          class="p-4 md:w-1/3 sm:mb-0 mb-6 flex flex-col justify-center pop"
+          class="w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4 sm:mb-0 mb-6 flex flex-col justify-center pop"
         >
           <div class="">
             <img

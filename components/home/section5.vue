@@ -16,7 +16,7 @@
       >
         <h1
           v-scroll-reveal="{ delay: 200 }"
-          class="sm:text-4xl text-3xl mb-4 font-bold leading-tight text-dark text-right"
+          class="sm:text-4xl text-3xl mb-4 font-bold leading-tight text-dark text-center sm:text-center md:text-right lg:text-right"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.heading }}
@@ -42,7 +42,7 @@
         >
           <nuxt-link
             to="/features"
-            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded font-semibold text-lg"
+            class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded font-semibold text-md"
           >
             <span v-if="$store.state.lang == 'en'">
               {{ en.tryfree }}
@@ -53,7 +53,7 @@
           </nuxt-link>
           <nuxt-link
             to="/show/financial"
-            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg"
+            class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-md"
           >
             <span v-if="$store.state.lang == 'en'">
               {{ en.showme }}

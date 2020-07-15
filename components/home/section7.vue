@@ -38,7 +38,7 @@
                   >Selengkapnya</nuxt-link
                 >
               </div>
-              <div class="md:w-1/2 relative">
+              <div v-if="!$isMobile()" class="md:w-1/2 relative">
                 <div class="hidden md:block">
                   <div
                     class="-ml-20 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"

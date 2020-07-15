@@ -7,13 +7,13 @@
         background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
       "
     >
-      <div class="px-20 py-20 md:py-16">
+      <div class="px-2 sm:px-2 md:px-20 lg:px-20 py-20 md:py-16">
         <div class="md:max-w-full md:mx-auto">
           <div class="md:flex md:flex-wrap">
             <div class="md:w-1/2 text-center md:text-left md:pt-16">
               <h1
                 v-scroll-reveal="{ delay: 200 }"
-                class="font-bold font-header text-white text-2xl md:text-5xl leading-tight mb-4 pt-16"
+                class="font-bold font-header text-white text-3xl md:text-5xl lg:text-5xl leading-tight mb-4 pt-16"
               >
                 <span v-if="$store.state.lang == 'id'" v-html="id.heading">
                   {{ id.heading }}
@@ -48,7 +48,7 @@
                 </span>
               </nuxt-link>
             </div>
-            <div class="md:w-1/2 relative">
+            <div v-if="!$isMobile()" class="md:w-1/2 relative">
               <div class="hidden md:block">
                 <div
                   v-scroll-reveal="{ delay: 450 }"

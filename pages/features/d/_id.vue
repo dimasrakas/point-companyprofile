@@ -6,6 +6,7 @@
       shift-x="0.98"
       shift-y="0.1"
       height="80%"
+      width="95%"
       :adaptive="true"
     >
       <div class="mb-4 px-4">
@@ -42,9 +43,11 @@
     </modal>
 
     <!-- Navigation -->
-    <div class="container mx-auto flex items-center justify-end">
+    <div class="container mx-auto px-2 flex items-center justify-end">
       <div class="flex flex-col justify-end">
-        <h5>You can change your choice later by clicking this button</h5>
+        <h5 class="text-xs sm:text-xs md:text-md lg:text-md">
+          You can change your choice later by clicking this button
+        </h5>
         <div class="flex justify-end" @click="show()">
           <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -59,11 +62,15 @@
     <div
       class="container mx-auto flex items-center justify-center flex-col mb-10"
     >
-      <h1 class="title-font sm:text-4xl text-4xl font-header font-bold">
+      <h1
+        class="title-font text-2xl sm:text-xl md:text-4xl lg:text-4xl font-header font-bold"
+      >
         <span v-if="$store.state.lang == 'en'">{{ headerString.en }}</span>
         <span v-if="$store.state.lang == 'id'">{{ headerString.id }}</span>
       </h1>
-      <h6 class="text-lg leading-relaxed font-description text-center">
+      <h6
+        class="text-sm sm:text-lg md:text-lg lg:text-lg leading-relaxed font-description text-center"
+      >
         <span v-if="$store.state.lang == 'en'">{{ en.subheading }}</span>
         <span v-if="$store.state.lang == 'id'">{{ id.subheading }}</span>
       </h6>

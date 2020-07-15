@@ -15,7 +15,7 @@
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
         </p>
       </div>
-      <div class="flex flex-wrap -m-4 px-20">
+      <div class="flex flex-wrap -m-4 px-2 md:px-20 lg:px-20">
         <div
           v-scroll-reveal="{ delay: 300 }"
           class="p-4 xl:w-1/3 md:w-1/2 w-full"
@@ -107,7 +107,7 @@
         </div>
         <div
           v-scroll-reveal="{ delay: 350 }"
-          class="p-4 xl:w-1/3 md:w-1/2 -mt-16 w-full"
+          class="p-4 xl:w-1/3 md:w-1/2 md:-mt-16 lg:-mt-16 w-full"
         >
           <div
             class="h-full p-6 rounded-lg border-2 border-green-500 flex flex-col relative overflow-hidden"

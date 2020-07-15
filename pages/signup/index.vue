@@ -20,7 +20,7 @@
         </h2>
 
         <div class="flex flex-wrap -mx-2">
-          <div class="w-1/2 px-2">
+          <div class="w-full md:w-1/2 lg:w-1/2 px-2">
             <p class="text-gray-600">First name</p>
             <input
               v-model="form.firstname"
@@ -29,7 +29,7 @@
               type="text"
             />
           </div>
-          <div class="w-1/2 px-2">
+          <div class="w-full md:w-1/2 lg:w-1/2 px-2">
             <p class="text-gray-600">Last Name</p>
             <input
               v-model="form.lastname"
@@ -61,7 +61,7 @@
         </div>
 
         <div class="flex flex-wrap -mx-2">
-          <div class="w-1/2 px-2">
+          <div class="w-full md:w-1/2 lg:w-1/2 px-2">
             <p class="text-gray-600">Password</p>
             <input
               v-model="form.password"
@@ -70,7 +70,7 @@
               type="password"
             />
           </div>
-          <div class="w-1/2 px-2">
+          <div class="w-full md:w-1/2 lg:w-1/2 px-2">
             <p class="text-gray-600">Password Confirmation</p>
             <input
               v-model="form.password_confirmation"
@@ -147,6 +147,7 @@
       shift-x="0.5"
       shift-y="0.5"
       height="80%"
+      width="95%"
       :adaptive="true"
     >
       <div class="flex flex-col justify-center items-center h-full">
@@ -156,7 +157,9 @@
           height="400"
           alt=""
         />
-        <h1 class="text-dark">Registration Success</h1>
+        <h1 class="text-2xl md:text-4xl lg:text-4xl text-dark">
+          Registration Success
+        </h1>
         <p class="text-dark">
           Please check your email to verify your email address
         </p>
