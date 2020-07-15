@@ -77,7 +77,11 @@
     </div>
 
     <div v-if="loading" class="container mx-auto flex flex-wrap">
-      <div v-for="data in 6" :key="data.id" class="xl:w-1/4 md:w-1/2 p-4">
+      <div
+        v-for="data in 6"
+        :key="data.id"
+        class="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 p-4"
+      >
         <div class="bg-white shadow-lg p-4">
           <vue-content-loading :width="300" :height="300">
             <rect y="0" rx="4" ry="4" width="300" height="100" />
