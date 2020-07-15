@@ -13,7 +13,7 @@
             <div class="md:w-1/2 text-center md:text-left md:pt-16">
               <h1
                 v-scroll-reveal="{ delay: 200 }"
-                class="font-bold font-header text-white text-3xl md:text-5xl lg:text-5xl leading-tight mb-4 pt-16"
+                class="font-bold font-header text-white text-2xl md:text-5xl lg:text-5xl leading-tight mb-4 pt-16"
               >
                 <span v-if="$store.state.lang == 'id'" v-html="id.heading">
                   {{ id.heading }}

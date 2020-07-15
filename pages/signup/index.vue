@@ -13,7 +13,7 @@
         />
       </div>
       <div
-        class="lg:w-3/6 md:w-1/2 bg-gray-200 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+        class="lg:w-3/6 md:w-1/2 bg-gray-200 rounded-lg p-4 md:p-8 lg:p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
       >
         <h2 class="text-gray-900 text-lg font-medium title-font mb-5">
           Form Registration
@@ -160,7 +160,7 @@
         <h1 class="text-2xl md:text-4xl lg:text-4xl text-dark">
           Registration Success
         </h1>
-        <p class="text-dark">
+        <p class="text-sm md:text-md lg:text-lg text-dark">
           Please check your email to verify your email address
         </p>
 
