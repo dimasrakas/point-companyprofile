@@ -40,14 +40,26 @@
                 <nuxt-link
                   to="/features"
                   class="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg shadow"
-                  >Coba Gratis</nuxt-link
                 >
+                  <span v-if="$store.state.lang == 'id'">
+                    {{ id.button }}
+                  </span>
+                  <span v-if="$store.state.lang == 'en'">
+                    {{ en.button }}
+                  </span>
+                </nuxt-link>
 
                 <nuxt-link
                   to="/show/responsive"
                   class="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-dark bg-gray-200 hover:bg-gray-300 font-medium rounded-lg shadow"
-                  >Selengkapnya</nuxt-link
                 >
+                  <span v-if="$store.state.lang == 'id'">
+                    {{ id.subbutton }}
+                  </span>
+                  <span v-if="$store.state.lang == 'en'">
+                    {{ en.subbutton }}
+                  </span>
+                </nuxt-link>
               </div>
               <div v-if="!$isMobile()" class="md:w-1/2 relative">
                 <div class="hidden md:block">

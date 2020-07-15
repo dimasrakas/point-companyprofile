@@ -1,6 +1,6 @@
 <template>
-  <section class="text-gray-700 body-font">
-    <div class="container px-5 py-10 mx-auto">
+  <section class="mt-64 lg:mt-1 md:mt-1">
+    <div class="container px-5 py-10 md:py-16 lg:py-16 mx-auto">
       <div
         v-scroll-reveal="{ delay: 100 }"
         class="flex flex-wrap w-full mb-10 flex-col items-center text-center"
@@ -10,7 +10,7 @@
         </h1>
       </div>
       <div class="flex flex-wrap justify-center -m-4">
-        <div v-scroll-reveal="{ delay: 150 }" class="xl:w-1/3 md:w-1/2 p-4">
+        <div v-scroll-reveal="{ delay: 150 }" class="xl:w-1/2 md:w-1/2 p-4">
           <div class="border border-gray-300 p-6 rounded-lg">
             <div
               class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"
@@ -33,7 +33,7 @@
             </p>
           </div>
         </div>
-        <div v-scroll-reveal="{ delay: 200 }" class="xl:w-1/3 md:w-1/2 p-4">
+        <div v-scroll-reveal="{ delay: 200 }" class="xl:w-1/2 md:w-1/2 p-4">
           <div class="border border-gray-300 p-6 rounded-lg">
             <div
               class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"
@@ -56,7 +56,7 @@
             </p>
           </div>
         </div>
-        <div v-scroll-reveal="{ delay: 250 }" class="xl:w-1/3 md:w-1/2 p-4">
+        <div v-scroll-reveal="{ delay: 250 }" class="xl:w-1/2 md:w-1/2 p-4">
           <div class="border border-gray-300 p-6 rounded-lg">
             <div
               class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"
@@ -79,7 +79,7 @@
             </p>
           </div>
         </div>
-        <div v-scroll-reveal="{ delay: 300 }" class="xl:w-1/3 md:w-1/2 p-4">
+        <div v-scroll-reveal="{ delay: 300 }" class="xl:w-1/2 md:w-1/2 p-4">
           <div class="border border-gray-300 p-6 rounded-lg">
             <div
               class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"
@@ -92,29 +92,6 @@
               </span>
               <span v-if="$store.state.lang == 'en'">
                 {{ en.heading4 }}
-              </span>
-            </h2>
-            <p
-              class="leading-relaxed text-base text-secondary font-description"
-            >
-              Fingerstache flexitarian street art 8-bit waist co, subway tile
-              poke farm.
-            </p>
-          </div>
-        </div>
-        <div v-scroll-reveal="{ delay: 350 }" class="xl:w-1/3 md:w-1/2 p-4">
-          <div class="border border-gray-300 p-6 rounded-lg">
-            <div
-              class="w-16 h-16 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4"
-            >
-              <img src="~/assets/icon/marketing.svg" alt="" />
-            </div>
-            <h2 class="text-2xl text-dark font-bold mb-2">
-              <span v-if="$store.state.lang == 'id'">
-                {{ id.heading5 }}
-              </span>
-              <span v-if="$store.state.lang == 'en'">
-                {{ en.heading5 }}
               </span>
             </h2>
             <p
@@ -148,16 +125,14 @@ export default {
         heading1: 'Get paid faster',
         heading2: 'Get back your time',
         heading3: 'Better tax control',
-        heading4: 'Get hold of your accounting',
-        heading5: 'Report in 1 click',
+        heading4: 'Get hold of your accounting Report in 1 click',
       },
       id: {
         title: 'Fitur Utama',
         heading1: 'Peroleh pembayaran secara cepat',
         heading2: 'Persingkat waktu anda',
         heading3: 'Kontrol perpajakan anda dengan lebih baik',
-        heading4: 'Get hold of your accounting',
-        heading5: 'Terima laporan akunting hanya dengan 1 tombol',
+        heading4: 'Terima laporan akunting hanya dengan 1 tombol',
       },
     }
   },

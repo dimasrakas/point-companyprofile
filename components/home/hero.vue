@@ -48,11 +48,11 @@
                 </span>
               </nuxt-link>
             </div>
-            <div v-if="!$isMobile()" class="md:w-1/2 relative">
+            <div class="md:w-1/2 relative">
               <div class="hidden md:block">
                 <div
                   v-scroll-reveal="{ delay: 450 }"
-                  class="-ml-20 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
+                  class="md:-ml-20 md:-mb-40 lg:-ml-20 lg:-mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
                   style="transform: rotate(-8deg);"
                 >
                   <img
@@ -115,7 +115,7 @@
 
                 <div
                   v-scroll-reveal="{ delay: 350 }"
-                  class="mt-10 w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden shadow-lg"
+                  class="mt-10 w-full md:absolute lg:absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden shadow-lg"
                   style="
                     transform: rotate(-8deg);
                     margin-right: -250px;
@@ -298,7 +298,7 @@
 
                 <div
                   v-scroll-reveal="{ delay: 600 }"
-                  class="w-full absolute left-0 bottom-0 ml-1"
+                  class="w-full md:absolute lg:absolute left-0 bottom-0 ml-1"
                   style="
                     transform: rotate(-8deg);
                     z-index: 1;
@@ -348,7 +348,12 @@
                 </div>
                 <div class="flex-1 px-4 py-8">
                   <h2 class="text-xs text-gray-700 font-bold mb-1">
-                    Popular Payments
+                    <span v-if="$store.state.lang == 'id'">
+                      {{ id.welcome }}
+                    </span>
+                    <span v-if="$store.state.lang == 'en'">
+                      {{ en.welcome }}
+                    </span>
                   </h2>
                   <div class="flex mb-5">
                     <div class="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
@@ -394,7 +399,12 @@
                   </div>
 
                   <h2 class="text-xs text-gray-700 font-bold mb-1">
-                    Popular Payments
+                    <span v-if="$store.state.lang == 'id'">
+                      {{ id.dashboard }}
+                    </span>
+                    <span v-if="$store.state.lang == 'en'">
+                      {{ en.dashboard }}
+                    </span>
                   </h2>
 
                   <div
@@ -456,38 +466,6 @@
                   </div>
                 </div>
               </div>
-
-              <div
-                v-scroll-reveal="{ delay: 200 }"
-                class="mr-3 md:hidden absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-10 py-6"
-                style="z-index: 2; margin-bottom: -380px;"
-              >
-                <div
-                  class="bg-green-500 mx-auto rounded-lg w-20 pt-3 mb-12 relative"
-                >
-                  <div class="h-3 bg-white"></div>
-
-                  <div class="text-right my-2">
-                    <div
-                      class="inline-flex w-3 h-3 rounded-full bg-white -mr-2"
-                    ></div>
-                    <div
-                      class="inline-flex w-3 h-3 rounded-full bg-green-500 border-2 border-white mr-2"
-                    ></div>
-                  </div>
-
-                  <div
-                    class="-ml-4 -mb-6 absolute left-0 bottom-0 w-16 bg-green-700 mx-auto rounded-lg pb-2 pt-3"
-                  >
-                    <div class="h-2 bg-white mb-2"></div>
-                    <div class="h-2 bg-white w-6 ml-auto rounded mr-2"></div>
-                  </div>
-                </div>
-
-                <div class="text-gray-800 text-center text-sm">
-                  Payment for <br />Internet
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -516,7 +494,7 @@ export default {
         service: 'Jasa',
         trading: 'Dagang',
         manufacture: 'Manufaktur',
-        welcome: 'Selamat Datang kembali, Dimas',
+        welcome: 'Selamat Datang kembali, Tiara',
         dashboard: 'Ini adalah papan kendali anda',
       },
       en: {
@@ -528,7 +506,7 @@ export default {
         service: 'Service',
         trading: 'Trading',
         manufacture: 'Manufacture',
-        welcome: 'Welcome back, Dimas',
+        welcome: 'Welcome back, Tiara',
         dashboard: ' This is your Dashboard',
       },
     }

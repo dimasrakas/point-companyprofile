@@ -75,7 +75,7 @@ export default {
       en: {
         heading:
           'The fuel to keep your passion and your business works well is to be aware of your financial position EASILY',
-        subheading: 'And..... we go it covered',
+        subheading: 'And..... we got it covered',
         description: '',
         tryfree: 'Try Free',
         showme: 'I want to know more ',

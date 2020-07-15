@@ -3,7 +3,7 @@
     <div
       class="container mx-auto flex px-5 mt-24 md:flex-row flex-col items-center"
     >
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
         <img
           v-scroll-reveal="{ delay: 250 }"
           class="object-cover object-center rounded"
@@ -69,7 +69,7 @@
     <div
       class="container mx-auto flex px-5 mt-24 mb-24 md:flex-row flex-col items-center"
     >
-      <div v-if="$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <div v-if="$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8">
         <img
           v-scroll-reveal="{ delay: 250 }"
           class="object-cover object-center rounded"

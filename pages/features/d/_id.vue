@@ -13,7 +13,15 @@
         <h2>Option :</h2>
       </div>
       <div class="flex flex-col px-4 py-4">
-        <h5 class="text-dark leading-none">Anda Memilih :</h5>
+        <h5 class="text-dark leading-none">
+          <span v-if="$store.state.lang == 'en'">{{
+            en.optionsubheading
+          }}</span>
+          <span v-if="$store.state.lang == 'id'">{{
+            id.optionsubheading
+          }}</span>
+          :
+        </h5>
         <div class="pt-2 relative mx-auto w-full text-gray-600">
           <v-select
             v-model="header"
@@ -27,7 +35,10 @@
           ></v-select>
         </div>
 
-        <h5 class="text-dark leading-none mt-5">Dan anda perlu :</h5>
+        <h5 class="text-dark leading-none mt-5">
+          <span v-if="$store.state.lang == 'en'">{{ en.optiondetail }}</span>
+          <span v-if="$store.state.lang == 'id'">{{ id.optiondetail }}</span> :
+        </h5>
         <div class="pt-2 relative mx-auto w-full text-gray-600">
           <v-select
             v-model="detail"
@@ -201,6 +212,9 @@ export default {
         description: '',
         tryfree: '',
         showme: '',
+        option: 'Option',
+        optionsubheading: 'You choose as your business',
+        optiondetail: 'And you need to',
       },
       id: {
         heading: '',
@@ -208,6 +222,9 @@ export default {
         description: '',
         tryfree: '',
         showme: '',
+        option: 'Pilihan',
+        optionsubheading: 'Anda memilih',
+        optiondetail: 'Dan anda perlu',
       },
       header: '',
       headerString: {
