@@ -4,6 +4,17 @@
       class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
     >
       <iframe
+        v-if="$isMobile()"
+        width="360"
+        height="215"
+        src="https://www.youtube.com/embed/Ayo_WjCCRIw"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <iframe
+        v-if="!$isMobile()"
         width="660"
         height="415"
         src="https://www.youtube.com/embed/Ayo_WjCCRIw"

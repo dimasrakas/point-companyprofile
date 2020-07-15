@@ -2,9 +2,20 @@
   <section class="bg-green-600">
     <div class="pt-20 mt-2">
       <div class="bg-green-600 md:overflow-hidden">
-        <div class="px-4 py-20 md:py-4">
+        <div class="px-4 lg:py-20 md:py-4">
           <div class="md:max-w-6xl md:mx-auto">
             <div class="md:flex md:flex-wrap">
+              <div
+                v-if="$isMobile()"
+                class="lg:max-w-lg lg:w-full md:w-1/2 flex justify-center items-center pb-8"
+              >
+                <img
+                  v-scroll-reveal="{ delay: 300 }"
+                  class="object-cover object-center rounded"
+                  alt="hero"
+                  src="~/assets/illustration/responsive.svg"
+                />
+              </div>
               <div class="md:w-1/2 text-center md:text-left md:pt-16">
                 <h1
                   class="font-bold text-white text-2xl md:text-5xl leading-tight mb-4"

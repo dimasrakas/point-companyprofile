@@ -23,6 +23,17 @@
 
         <div class="flex items-center justify-center py-4">
           <iframe
+            v-if="$isMobile()"
+            width="660"
+            height="415"
+            src="https://www.youtube.com/embed/6qys-562kp4"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <iframe
+            v-if="!$isMobile()"
             width="660"
             height="415"
             src="https://www.youtube.com/embed/6qys-562kp4"

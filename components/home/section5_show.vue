@@ -3,7 +3,10 @@
     <div
       class="container mx-auto flex px-5 md:flex-row flex-col items-center justify-center"
     >
-      <h1 v-scroll-reveal="{ delay: 200 }" class="text-3xl font-bold text-dark">
+      <h1
+        v-scroll-reveal="{ delay: 200 }"
+        class="text-xl md:text-3xl lg:text-3xl font-bold text-dark text-center md:text-left lg:text-left"
+      >
         <span v-if="$store.state.lang == 'en'">
           {{ en.heading }}
         </span>
@@ -38,7 +41,7 @@
       >
         <h1
           v-scroll-reveal="{ delay: 250 }"
-          class="title-font sm:text-4xl text-3xl mb-4 font-bold text-dark leading-tight"
+          class="title-font sm:text-4xl text-3xl md:mb-4 lg:mb-4 font-bold text-dark leading-tight"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.heading2 }}
@@ -49,7 +52,7 @@
         </h1>
         <p
           v-scroll-reveal="{ delay: 300 }"
-          class="mb-8 text-xl leading-relaxed text-secondary font-description"
+          class="md:mb-8 lg:mb-8 text-xl leading-relaxed text-secondary font-description"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.subheading2 }}
@@ -59,7 +62,7 @@
           </span>
         </p>
       </div>
-      <div class="lg:w-full max-w-xl md:w-1/2 w-1/2 pr-16">
+      <div class="lg:w-full max-w-xl md:w-1/2 w-full md:pr-16 lg:pr-16">
         <img
           v-scroll-reveal="{ delay: 350 }"
           class="object-cover object-center rounded"
@@ -88,7 +91,7 @@
         </h1>
         <p
           v-scroll-reveal="{ delay: 450 }"
-          class="mb-8 text-xl leading-relaxed text-secondary font-description"
+          class="md:mb-8 lg:mb-8 text-xl leading-relaxed text-secondary font-description"
         >
           <span v-if="$store.state.lang == 'en'">
             {{ en.subheading3 }}
@@ -98,7 +101,7 @@
           </span>
         </p>
       </div>
-      <div class="lg:w-full max-w-xl md:w-1/2 w-1/2 pr-16">
+      <div class="lg:w-full max-w-xl md:w-1/2 w-full md:pr-16 lg:pr-16">
         <img
           v-scroll-reveal="{ delay: 500 }"
           class="object-cover object-center rounded"
