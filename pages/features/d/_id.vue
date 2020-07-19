@@ -5,15 +5,13 @@
       name="feature-modal"
       shift-x="0.98"
       shift-y="0.1"
-      height="80%"
-      width="95%"
+      height="60%"
+      width="25%"
       :adaptive="true"
     >
-      <div class="mb-4 px-4">
-        <h2>Option :</h2>
-      </div>
       <div class="flex flex-col px-4 py-4">
-        <h5 class="text-dark leading-none">
+        <!-- Select for Header -->
+        <h5 class="text-dark leading-none mb-1">
           <span v-if="$store.state.lang == 'en'">{{
             en.optionsubheading
           }}</span>
@@ -22,33 +20,83 @@
           }}</span>
           :
         </h5>
-        <div class="pt-2 relative mx-auto w-full text-gray-600">
-          <v-select
-            v-model="header"
-            class="w-full rounded-lg text-sm focus:outline-none"
-            label="name"
-            :reduce="(optionsHeader) => optionsHeader.id"
-            :value="id"
-            :options="optionsHeader"
-            :clearable="false"
-            @input="headerSelected"
-          ></v-select>
+        <div class="w-full mb-6 md:mb-0">
+          <div class="relative">
+            <select
+              id="grid-state"
+              v-model="header"
+              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-1 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              @change="headerSelected()"
+            >
+              <option
+                v-for="dataHeader in optionsHeader"
+                :key="dataHeader.id"
+                :value="dataHeader.id"
+              >
+                <span v-if="$store.state.lang == 'en'">{{
+                  dataHeader.name_lang.en
+                }}</span>
+                <span v-if="$store.state.lang == 'id'">{{
+                  dataHeader.name_lang.id
+                }}</span>
+              </option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
 
-        <h5 class="text-dark leading-none mt-5">
+        <!-- Select for SubHeader -->
+        <h5 class="text-dark leading-none mt-5 mb-1">
           <span v-if="$store.state.lang == 'en'">{{ en.optiondetail }}</span>
           <span v-if="$store.state.lang == 'id'">{{ id.optiondetail }}</span> :
         </h5>
-        <div class="pt-2 relative mx-auto w-full text-gray-600">
-          <v-select
-            v-model="detail"
-            class="w-full rounded-lg text-sm focus:outline-none"
-            label="name"
-            :reduce="(optionsDetail) => optionsDetail.id"
-            :value="id"
-            :options="optionsDetail"
-            @input="detailSelected"
-          ></v-select>
+        <div class="w-full mb-6 md:mb-0">
+          <div class="relative">
+            <select
+              id="grid-state"
+              v-model="detail"
+              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-1 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              @change="detailSelected()"
+            >
+              <option
+                v-for="dataDetail in optionsDetail"
+                :key="dataDetail.id"
+                :value="dataDetail.id"
+              >
+                <span v-if="$store.state.lang == 'en'">{{
+                  dataDetail.name_lang.en
+                }}</span>
+                <span v-if="$store.state.lang == 'id'">{{
+                  dataDetail.name_lang.id
+                }}</span>
+              </option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <svg
+                class="fill-current h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </modal>
@@ -56,9 +104,6 @@
     <!-- Navigation -->
     <div class="container mx-auto px-2 flex items-center justify-end">
       <div class="flex flex-col justify-end">
-        <h5 class="text-xs sm:text-xs md:text-md lg:text-md">
-          You can change your choice later by clicking this button
-        </h5>
         <div class="flex justify-end" @click="show()">
           <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -263,14 +308,14 @@ export default {
       this.$modal.hide('feature-modal')
     },
     headerSelected(value) {
-      this.header = value
+      // this.header = value
       this.detail = ''
       this.showFeatureDetails = false
       this.updateSubHeader()
       this.getHeaderOne()
     },
     detailSelected(value) {
-      this.detail = value
+      // this.detail = value
       this.showFeatureSubHeaders = false
       this.hide()
       this.updateDetail()

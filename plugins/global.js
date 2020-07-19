@@ -6,6 +6,8 @@ import 'vue-select/dist/vue-select.css'
 
 import VueMobileDetection from 'vue-mobile-detection'
 
+import VueTour from 'vue-tour'
+
 Vue.use(VueScrollReveal, {
   class: 'v-scroll-reveal', // A CSS class applied to elements with the v-scroll-reveal directive; useful for animation overrides.
   mobile: false,
@@ -16,6 +18,10 @@ Vue.use(VueScrollReveal, {
   origin: 'bottom',
   scale: 1,
 })
+
+require('vue-tour/dist/vue-tour.css')
+
+Vue.use(VueTour)
 
 Vue.component('v-select', vSelect)
 Vue.use(VueMobileDetection)

@@ -16,6 +16,7 @@
         </p>
       </div>
       <div class="flex flex-wrap -m-4 px-2 md:px-20 lg:px-20">
+        <!-- Basic -->
         <div
           v-scroll-reveal="{ delay: 300 }"
           class="p-4 xl:w-1/3 md:w-1/2 w-full"
@@ -66,7 +67,7 @@
                 </svg> </span
               >Basic resource management features
             </p>
-            <p class="flex items-center text-gray-600 mb-6">
+            <p class="flex items-center text-gray-600 mb-3">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0"
               >
@@ -83,6 +84,12 @@
                 </svg> </span
               >Up to 10 users
             </p>
+            <nuxt-link
+              to="/pricing/detail"
+              class="flex items-center mb-6 text-primary cursor-pointer text-lg"
+            >
+              Learn More
+            </nuxt-link>
             <nuxt-link
               to="/pricing/detail"
               class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded"
@@ -105,6 +112,8 @@
             </p>
           </div>
         </div>
+
+        <!-- Pro -->
         <div
           v-scroll-reveal="{ delay: 350 }"
           class="p-4 xl:w-1/3 md:w-1/2 md:-mt-16 lg:-mt-16 w-full"
@@ -159,7 +168,7 @@
                 </svg> </span
               >Include all basic features and accounting forecast
             </p>
-            <p class="flex items-center text-gray-600 mb-2">
+            <p class="flex items-center text-gray-600 mb-3">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0"
               >
@@ -176,6 +185,12 @@
                 </svg> </span
               >Up to 50 users
             </p>
+            <nuxt-link
+              to="/pricing/detail"
+              class="flex items-center mb-6 text-primary cursor-pointer text-lg"
+            >
+              Learn More
+            </nuxt-link>
             <nuxt-link
               to="/pricing/detail"
               class="flex items-center mt-auto text-white bg-green-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-green-600 rounded"
@@ -198,6 +213,8 @@
             </p>
           </div>
         </div>
+
+        <!-- Premium -->
         <div
           v-scroll-reveal="{ delay: 400 }"
           class="p-4 xl:w-1/3 md:w-1/2 w-full"
@@ -248,7 +265,7 @@
                 </svg> </span
               >Enterprise resource management features
             </p>
-            <p class="flex items-center text-gray-600 mb-2">
+            <p class="flex items-center text-gray-600 mb-3">
               <span
                 class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0"
               >
@@ -265,6 +282,12 @@
                 </svg> </span
               >Unlimited users
             </p>
+            <nuxt-link
+              to="/pricing/detail"
+              class="flex items-center mb-6 text-primary cursor-pointer text-lg"
+            >
+              Learn More
+            </nuxt-link>
             <nuxt-link
               to="/pricing/detail"
               class="flex items-center mt-auto text-white bg-gray-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-600 rounded"
