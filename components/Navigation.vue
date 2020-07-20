@@ -158,7 +158,6 @@
       <div>
         <div class="hidden md:block">
           <nuxt-link
-            id="v-step-0"
             to="/"
             :class="{
               'font-extrabold': this.$route.name.includes('index'),

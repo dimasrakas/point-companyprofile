@@ -22,9 +22,9 @@
         </p>
       </div>
       <div
-        class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first"
+        class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left justify-center text-center order-first"
       >
-        <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+        <div class="lg:w-1/3 md:w-1/2 w-1/2 px-4">
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >
@@ -51,7 +51,7 @@
             </li>
           </nav>
         </div>
-        <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+        <div class="lg:w-1/3 md:w-1/2 w-1/2 px-4">
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >
@@ -80,7 +80,7 @@
             </li>
           </nav>
         </div>
-        <div class="lg:w-1/3 md:w-1/2 w-full px-4">
+        <div class="lg:w-1/3 md:w-1/2 w-1/2 px-4">
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >

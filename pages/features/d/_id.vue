@@ -105,7 +105,12 @@
     <div class="container mx-auto px-2 flex items-center justify-end">
       <div class="flex flex-col justify-end">
         <div class="flex justify-end" @click="show()">
-          <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+          <svg
+            id="v-step-0"
+            class="w-10 h-10"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
             <path
               d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
             />
@@ -239,6 +244,15 @@
         </div>
       </div>
     </div>
+
+    <!-- Pop Up Tour -->
+    <div v-if="$store.state.lang == 'id'">
+      <v-tour name="myTour" :steps="stepsID" :options="myOptionsID"></v-tour>
+    </div>
+
+    <div v-if="$store.state.lang == 'en'">
+      <v-tour name="myTour" :steps="stepsEN" :options="myOptionsEN"></v-tour>
+    </div>
   </section>
 </template>
 
@@ -246,11 +260,42 @@
 import { VueContentLoading } from 'vue-content-loading'
 
 export default {
+  name: 'MyTour',
   components: {
     VueContentLoading,
   },
   data() {
     return {
+      myOptionsID: {
+        useKeyboardNavigation: false,
+        labels: {
+          buttonSkip: 'Skip tour',
+          buttonPrevious: 'Previous',
+          buttonNext: 'Next',
+          buttonStop: 'Tutup',
+        },
+      },
+      stepsID: [
+        {
+          target: '#v-step-0', // We're using document.querySelector() under the hood
+          content: `Anda dapat merubah pilihan anda dengan klik tombol ini`,
+        },
+      ],
+      myOptionsEN: {
+        useKeyboardNavigation: false,
+        labels: {
+          buttonSkip: 'Skip tour',
+          buttonPrevious: 'Previous',
+          buttonNext: 'Next',
+          buttonStop: 'Close',
+        },
+      },
+      stepsEN: [
+        {
+          target: '#v-step-0', // We're using document.querySelector() under the hood
+          content: `You can change your choice later by clicking this button`,
+        },
+      ],
       en: {
         heading: '',
         subheading: 'What do you currently need ?',
@@ -295,6 +340,7 @@ export default {
     this.getHeader()
     this.getSubHeader()
     this.header = this.$route.params.id
+    this.$tours.myTour.start()
   },
 
   methods: {

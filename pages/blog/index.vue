@@ -40,7 +40,11 @@
                   {{ data.category }}
                 </h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
-                  {{ data.title }}
+                  {{
+                    data.title.length >= 40
+                      ? data.title.substring(-0, 40) + '....'
+                      : data.title
+                  }}
                 </h1>
                 <p class="leading-relaxed mb-3">
                   Photo booth fam kinfolk cold-pressed sriracha leggings
@@ -96,6 +100,11 @@
 import { VueContentLoading } from 'vue-content-loading'
 
 export default {
+  filters: {
+    strippedContent(string) {
+      return string.replace(/<\/?[^>]+>/gi, ' ')
+    },
+  },
   components: {
     VueContentLoading,
   },
