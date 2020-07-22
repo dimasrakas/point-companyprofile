@@ -5,8 +5,8 @@
       name="feature-modal"
       shift-x="0.98"
       shift-y="0.1"
-      height="60%"
-      width="25%"
+      height="300px"
+      width="400px"
       :adaptive="true"
     >
       <div class="flex flex-col px-4 py-4">

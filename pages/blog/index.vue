@@ -29,9 +29,13 @@
               <div
                 class="flex items-center justify-center mx-auto h-48 bg-green-500 rounded-md"
               >
-                <h1 class="uppercase font-bold text-white text-4xl">
-                  #{{ (data.category.substring(-0, 10)) }}
-                </h1>
+                <img
+                  class="object-cover w-full h-48 rounded-md"
+                  :src="
+                    'http://admin.point.dimasrakas.com/storage/' + data.slug
+                  "
+                  alt=""
+                />
               </div>
               <div class="p-6">
                 <h2
