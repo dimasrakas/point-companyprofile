@@ -51,8 +51,11 @@
                   }}
                 </h1>
                 <p class="leading-relaxed mb-3">
-                  Photo booth fam kinfolk cold-pressed sriracha leggings
-                  jianbing microdosing tousled waistcoat.
+                  {{
+                    data.small_description.length >= 80
+                      ? data.small_description.substring(-0, 80) + '....'
+                      : data.small_description
+                  }}
                 </p>
                 <div class="flex items-center flex-wrap">
                   <a
