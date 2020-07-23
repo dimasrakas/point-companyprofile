@@ -32,7 +32,7 @@
                 <img
                   class="object-cover w-full h-48 rounded-md"
                   :src="
-                    'http://admin.point.dimasrakas.com/storage/' + data.slug
+                    'http://admin.point.dimasrakas.com/storage/' + data.image
                   "
                   alt=""
                 />
@@ -45,15 +45,15 @@
                 </h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
                   {{
-                    data.title.length >= 40
-                      ? data.title.substring(-0, 40) + '....'
+                    data.title.length >= 35
+                      ? data.title.substring(-0, 35) + '...'
                       : data.title
                   }}
                 </h1>
-                <p class="leading-relaxed mb-3">
+                <p class="leading-relaxed mb-3 text-gray-500">
                   {{
-                    data.small_description.length >= 80
-                      ? data.small_description.substring(-0, 80) + '....'
+                    data.small_description.length >= 40
+                      ? data.small_description.substring(-0, 40) + '...'
                       : data.small_description
                   }}
                 </p>

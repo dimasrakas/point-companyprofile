@@ -26,7 +26,7 @@
               id="grid-state"
               v-model="header"
               class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-1 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              @change="headerSelected()"
+              @change="modalHeaderSelected()"
             >
               <option
                 v-for="dataHeader in optionsHeader"
@@ -68,7 +68,7 @@
               id="grid-state"
               v-model="detail"
               class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-2 px-1 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              @change="detailSelected()"
+              @change="modalDetailSelected()"
             >
               <option
                 v-for="dataDetail in optionsDetail"
@@ -353,15 +353,31 @@ export default {
     hide() {
       this.$modal.hide('feature-modal')
     },
+
+    // Select Data from Modals
+    modalHeaderSelected() {
+      this.detail = ''
+      this.showFeatureDetails = false
+      this.updateSubHeader()
+      this.getHeaderOne()
+    },
+    modalDetailSelected() {
+      this.showFeatureSubHeaders = false
+      this.hide()
+      this.updateDetail()
+      this.getSubHeaderOne()
+    },
+
+    // Select Data
     headerSelected(value) {
-      // this.header = value
+      this.header = value
       this.detail = ''
       this.showFeatureDetails = false
       this.updateSubHeader()
       this.getHeaderOne()
     },
     detailSelected(value) {
-      // this.detail = value
+      this.detail = value
       this.showFeatureSubHeaders = false
       this.hide()
       this.updateDetail()

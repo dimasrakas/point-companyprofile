@@ -13,11 +13,15 @@
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
         <div
-          class="flex items-center justify-center mx-auto h-48 bg-green-400 rounded-md"
+          class="flex items-center justify-center mx-auto h-64 bg-green-400 rounded-md"
         >
-          <h1 class="uppercase font-bold text-white text-4xl">
-            #{{ (articleDetail.category) }}
-          </h1>
+          <img
+            class="object-cover w-full h-64 rounded-md"
+            :src="
+              'http://admin.point.dimasrakas.com/storage/' + articleDetail.image
+            "
+            alt=""
+          />
         </div>
       </div>
     </div>
