@@ -32,7 +32,7 @@
                 <img
                   class="object-cover w-full h-48 rounded-md"
                   :src="
-                    'http://admin.point.dimasrakas.com/storage/' + data.image
+                    'https://admin.point.dimasrakas.com/storage/' + data.image
                   "
                   alt=""
                 />
