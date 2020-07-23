@@ -48,7 +48,7 @@
         <nuxt-link
           v-for="data in featureHeaders"
           :key="data.id"
-          :to="{ name: 'features-d-id___it', params: { id: data.id } }"
+          :to="{ name: 'features-d-id', params: { id: data.id } }"
           class="w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4 sm:mb-0 mb-6 flex flex-col justify-center pop"
         >
           <div class="">
