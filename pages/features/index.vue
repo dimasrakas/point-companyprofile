@@ -57,7 +57,7 @@
               alt="content"
               class="h-48 w-full mb-4"
               :src="
-                'http://private.server.dimasrakas.com/illustration/' +
+                'https://private.server.dimasrakas.com/illustration/' +
                 data.image
               "
             />
