@@ -23,7 +23,7 @@
         <div v-for="data in article" :key="data.id" class="p-4 md:w-1/3">
           <div class="bg-white shadow-lg pop">
             <nuxt-link
-              :to="{ name: 'blog-id___it', params: { id: data.id } }"
+              :to="{ name: 'blog-id', params: { id: data.id } }"
               class="h-full border-2 border-gray-200 rounded-lg overflow-hidden pop"
             >
               <div
