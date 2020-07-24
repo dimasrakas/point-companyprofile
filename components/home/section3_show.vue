@@ -26,7 +26,7 @@
             v-if="$isMobile()"
             width="660"
             height="415"
-            src="https://www.youtube.com/embed/6qys-562kp4"
+            :src="'https://www.youtube.com/embed/' + video"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -36,7 +36,7 @@
             v-if="!$isMobile()"
             width="660"
             height="415"
-            src="https://www.youtube.com/embed/6qys-562kp4"
+            :src="'https://www.youtube.com/embed/' + video"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -80,7 +80,30 @@ export default {
         tryfree: 'Mulai Sekarang',
         showme: '',
       },
+      video: '',
     }
+  },
+
+  mounted() {
+    this.getData()
+  },
+
+  methods: {
+    async getData() {
+      try {
+        const response = await this.$axios.get(
+          'https://admin.point.dimasrakas.com/api/v1/video/2'
+        )
+
+        if (response.status === 200) {
+          this.video = response.data.url
+          console.log(response.data)
+          console.log(this.video)
+        }
+      } catch (e) {
+        console.log(e.response.error)
+      }
+    },
   },
 }
 </script>

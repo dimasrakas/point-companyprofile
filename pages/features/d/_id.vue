@@ -174,7 +174,7 @@
                 alt="content"
                 class="h-48 w-full"
                 :src="
-                  'http://private.server.dimasrakas.com/illustration/' +
+                  'https://private.server.dimasrakas.com/illustration/' +
                   subheader.image +
                   '.svg'
                 "
@@ -219,7 +219,7 @@
                 alt="content"
                 class="object-center h-full w-full"
                 :src="
-                  'http://private.server.dimasrakas.com/illustration/' +
+                  'https://private.server.dimasrakas.com/illustration/' +
                   details.image +
                   '.svg'
                 "
