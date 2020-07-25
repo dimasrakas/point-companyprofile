@@ -123,7 +123,6 @@
     <div
       class="container mx-auto flex items-center justify-center flex-col mb-10"
     >
-      <h1>{{ this.$route.name }}</h1>
       <h1
         class="title-font text-2xl sm:text-xl md:text-4xl lg:text-4xl font-header font-bold"
       >
