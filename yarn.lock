@@ -2292,7 +2292,7 @@ axios-retry@^3.1.8:
   dependencies:
     is-retry-allowed "^1.1.0"
 
-axios@^0.19.0, axios@^0.19.2:
+axios@^0.19.2:
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
   integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
@@ -7003,19 +7003,6 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lottie-vuejs@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/lottie-vuejs/-/lottie-vuejs-0.3.7.tgz#01b23372f923cc7ea4ff1c09e29caca2d1bcfa13"
-  integrity sha512-bvFJu+nF7dbG3iqvotRLlKsiEv+12SzyERd1fqbMkMRodZ+9pesX982HQDwuARXMwGdcb5Xq6VD4GqUouyTq/g==
-  dependencies:
-    axios "^0.19.0"
-    lottie-web "^5.1.9"
-
-lottie-web@^5.1.9:
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.7.1.tgz#505f748a2dda836f7b582f811004c5ab8791c90c"
-  integrity sha512-f7kO4Qcurldc9SWfGUuwgs96/SCT+hwATMCdMK6I/sd6EYK3Y0Ciz40yAvq0x9uXzrk6KKcnQrqijZM8Ir4Drg==
-
 lower-case@^1.1.1:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
@@ -11377,6 +11364,11 @@ vue-server-renderer@^2.6.11:
     resolve "^1.2.0"
     serialize-javascript "^2.1.2"
     source-map "0.5.6"
+
+vue-social-sharing@^3.0.0-beta.11:
+  version "3.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/vue-social-sharing/-/vue-social-sharing-3.0.0-beta.11.tgz#3a753664f256ae4040ca2d7634dde47c83024038"
+  integrity sha512-jIATgcKcBGQveAbU4sKjHcsGN7gI/bq/T9fm/5qowtBuZe0I+5CZRWcAGDd6G64HzQfFEyNBLC02GYjMtaovhA==
 
 vue-style-loader@^4.1.0:
   version "4.1.2"

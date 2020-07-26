@@ -23,6 +23,7 @@
         {{ $store.state.lang == 'en' ? en.action : id.action }}
       </nuxt-link>
     </div>
+
     <div v-else class="container mx-auto flex px-5 py-24 md:flex-row flex-col">
       <!-- Mobile -->
       <div
@@ -55,6 +56,88 @@
           {{ articleDetail.category }} |
           {{ articleDetail.created_at | moment('DD-MM-YYYY') }}
         </div>
+        <div class="flex flex-wrap mb-3">
+          <ShareNetwork
+            network="whatsapp"
+            :url="url"
+            :title="articleDetail.title"
+            :description="articleDetail.small_description"
+          >
+            <div class="flex flex-wrap mr-2">
+              <div
+                class="flex justify-center items-center bg-green-600 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div
+                class="bg-green-500 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                WhatsApp
+              </div>
+            </div>
+          </ShareNetwork>
+
+          <ShareNetwork
+            network="twitter"
+            :url="url"
+            :title="articleDetail.title"
+            :description="articleDetail.small_description"
+            :quote="articleDetail.title"
+            hashtags="pointerp,pinpoint"
+            twitter-user="dimasrakas"
+          >
+            <div class="flex flex-wrap mr-2">
+              <div
+                class="flex justify-center items-center bg-blue-400 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                <i class="fab fa-twitter"></i>
+              </div>
+              <div
+                class="bg-blue-300 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                Twitter
+              </div>
+            </div>
+          </ShareNetwork>
+
+          <ShareNetwork
+            network="facebook"
+            :url="url"
+            :title="articleDetail.title"
+            :description="articleDetail.small_description"
+            :quote="articleDetail.title"
+            hashtags="pointerp,pinpoint"
+          >
+            <div class="flex flex-wrap mr-2">
+              <div
+                class="flex justify-center items-center bg-blue-700 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div
+                class="bg-blue-600 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                Facebook
+              </div>
+            </div>
+          </ShareNetwork>
+
+          <ShareNetwork network="linkedin" :url="url">
+            <div class="flex flex-wrap mr-2">
+              <div
+                class="flex justify-center items-center bg-blue-800 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div
+                class="bg-blue-700 px-3 py-1 text-white font-medium cursor-pointer"
+              >
+                LinkedIn
+              </div>
+            </div>
+          </ShareNetwork>
+        </div>
+
         <p v-html="articleDetail.html_content"></p>
       </div>
       <div v-if="!$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -87,11 +170,13 @@ export default {
         action: 'Kembali ke Beranda',
       },
       articleDetail: '',
+      url: '',
     }
   },
 
   mounted() {
     this.getData()
+    this.url = document.URL
   },
 
   methods: {
