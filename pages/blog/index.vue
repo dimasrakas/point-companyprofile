@@ -24,7 +24,10 @@
         <nuxt-link
           v-for="data in article"
           :key="data.id"
-          :to="{ name: 'blog-id', params: { id: data.id } }"
+          :to="{
+            path: '/blog/d/',
+            query: { p: data.slug, id: data.id },
+          }"
           class="w-full sm:w-1/2 md:w-1/3 mb-4 p-4"
         >
           <div class="relative bg-white shadow-lg pop rounded-lg h-128">

@@ -1,6 +1,29 @@
 <template>
   <section class="text-gray-700 body-font">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col">
+    <div
+      v-if="articleDetail === ''"
+      class="container mx-auto flex flex-col items-center justify-center h-screen w-screen"
+    >
+      <div class="pt-12">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets2.lottiefiles.com/packages/lf20_HTumD4.json"
+          background="transparent"
+          speed="1"
+          style="width: 400px; height: 400px;"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+      <h1>{{ $store.state.lang == 'en' ? en.message : id.message }}</h1>
+      <nuxt-link
+        to="/"
+        class="border-2 border-green-400 rounded-lg text-green-400 px-4 py-1"
+      >
+        {{ $store.state.lang == 'en' ? en.action : id.action }}
+      </nuxt-link>
+    </div>
+    <div v-else class="container mx-auto flex px-5 py-24 md:flex-row flex-col">
       <!-- Mobile -->
       <div
         v-if="$isMobile()"
@@ -28,6 +51,10 @@
         >
           {{ articleDetail.title }}
         </h1>
+        <div class="block mb-3 text-sm text-gray-500">
+          {{ articleDetail.category }} |
+          {{ articleDetail.created_at | moment('DD-MM-YYYY') }}
+        </div>
         <p v-html="articleDetail.html_content"></p>
       </div>
       <div v-if="!$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -51,6 +78,14 @@
 export default {
   data() {
     return {
+      en: {
+        message: 'Page not found',
+        action: 'Back to Home',
+      },
+      id: {
+        message: 'Halaman tidak di temukan',
+        action: 'Kembali ke Beranda',
+      },
       articleDetail: '',
     }
   },
@@ -64,12 +99,15 @@ export default {
       try {
         const response = await this.$axios.get(
           'https://admin.point.dimasrakas.com/api/v1/article/' +
-            this.$route.params.id
+            this.$route.query.id
         )
 
         if (response.status === 200) {
           this.articleDetail = response.data
           console.log(this.articleDetail)
+          this.headers = response.headers
+
+          console.log(response.headers)
         }
       } catch (e) {
         console.log(this.response.error)
