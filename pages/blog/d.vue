@@ -63,7 +63,7 @@
             :title="articleDetail.title"
             :description="articleDetail.small_description"
           >
-            <div class="flex flex-wrap mr-2">
+            <div class="flex flex-wrap mr-2 my-1">
               <div
                 class="flex justify-center items-center bg-green-600 px-3 py-1 text-white font-medium cursor-pointer"
               >
@@ -86,7 +86,7 @@
             hashtags="pointerp,pinpoint"
             twitter-user="dimasrakas"
           >
-            <div class="flex flex-wrap mr-2">
+            <div class="flex flex-wrap mr-2 my-1">
               <div
                 class="flex justify-center items-center bg-blue-400 px-3 py-1 text-white font-medium cursor-pointer"
               >
@@ -108,7 +108,7 @@
             :quote="articleDetail.title"
             hashtags="pointerp,pinpoint"
           >
-            <div class="flex flex-wrap mr-2">
+            <div class="flex flex-wrap mr-2 my-1">
               <div
                 class="flex justify-center items-center bg-blue-700 px-3 py-1 text-white font-medium cursor-pointer"
               >
@@ -123,7 +123,7 @@
           </ShareNetwork>
 
           <ShareNetwork network="linkedin" :url="url">
-            <div class="flex flex-wrap mr-2">
+            <div class="flex flex-wrap mr-2 my-1">
               <div
                 class="flex justify-center items-center bg-blue-800 px-3 py-1 text-white font-medium cursor-pointer"
               >
