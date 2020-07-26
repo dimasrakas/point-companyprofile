@@ -3,7 +3,7 @@
     <div class="container px-5 py-48 mx-auto flex sm:flex-no-wrap flex-wrap">
       <div
         v-scroll-reveal.reset="{ delay: 200 }"
-        class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+        class="w-full bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
       >
         <iframe
           class="absolute inset-0"
@@ -43,17 +43,6 @@
             <p class="leading-relaxed">123-456-7890</p>
           </div>
         </div>
-      </div>
-      <div
-        v-scroll-reveal.reset="{ delay: 250 }"
-        class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
-      >
-        <h2 class="text-dark text-4xl mb-1 font-bold">
-          CONTACT US
-        </h2>
-        <p class="leading-relaxed mb-5 text-secondary">
-          Point Jl. Musi 21, Surabaya email : Pointred017@gmail.com
-        </p>
       </div>
     </div>
   </section>

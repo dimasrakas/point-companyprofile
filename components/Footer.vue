@@ -17,8 +17,12 @@
           <span class="ml-3 text-xl">Point.RED</span>
         </a>
         <p class="mt-2 text-sm text-gray-500">
-          Exceptional accounting and bookkeeping solutions in this most
-          demanding era.
+          <span v-if="$store.state.lang == 'id'">
+            {{ id.headline }}
+          </span>
+          <span v-if="$store.state.lang == 'en'">
+            {{ en.headline }}
+          </span>
         </p>
       </div>
       <div
@@ -28,26 +32,59 @@
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >
-            PRODUCT
+            <span v-if="$store.state.lang == 'id'">
+              {{ id.product }}
+            </span>
+            <span v-if="$store.state.lang == 'en'">
+              {{ en.product }}
+            </span>
           </h2>
           <nav class="list-none mb-10">
             <li>
               <nuxt-link
                 to="/features"
                 class="text-gray-600 hover:text-gray-800"
-                >Features</nuxt-link
+              >
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.features }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.features }}
+                </span></nuxt-link
               >
             </li>
             <li>
-              <nuxt-link to="/pricing" class="text-gray-600 hover:text-gray-800"
-                >Pricing</nuxt-link
+              <nuxt-link
+                to="/pricing"
+                class="text-gray-600 hover:text-gray-800"
+              >
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.pricing }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.pricing }}
+                </span></nuxt-link
               >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Developer</a>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.developer }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.developer }}
+                </span></a
+              >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Technology</a>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.technology }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.technology }}
+                </span></a
+              >
             </li>
           </nav>
         </div>
@@ -55,28 +92,56 @@
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >
-            COMPANY
+            <span v-if="$store.state.lang == 'id'">
+              {{ id.company }}
+            </span>
+            <span v-if="$store.state.lang == 'en'">
+              {{ en.company }}
+            </span>
           </h2>
           <nav class="list-none mb-10">
             <li>
-              <nuxt-link to="/about" class="text-gray-600 hover:text-gray-800"
-                >About</nuxt-link
+              <nuxt-link to="/about" class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.about }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.about }}
+                </span></nuxt-link
               >
             </li>
             <li>
-              <nuxt-link to="/blog" class="text-gray-600 hover:text-gray-800"
-                >Blog</nuxt-link
+              <nuxt-link to="/blog" class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.blog }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.blog }}
+                </span></nuxt-link
               >
             </li>
             <li>
               <a
                 href="https://github.com/point-red"
                 class="text-gray-600 hover:text-gray-800"
-                >Github</a
+              >
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.github }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.github }}
+                </span></a
               >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Become Partner</a>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.becomepartner }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.becomepartner }}
+                </span></a
+              >
             </li>
           </nav>
         </div>
@@ -84,25 +149,66 @@
           <h2
             class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
           >
-            SUPPORT
+            <span v-if="$store.state.lang == 'id'">
+              {{ id.support }}
+            </span>
+            <span v-if="$store.state.lang == 'en'">
+              {{ en.support }}
+            </span>
           </h2>
           <nav class="list-none mb-10">
             <li>
-              <a class="text-gray-600 hover:text-gray-800">FAQ</a>
-            </li>
-            <li>
-              <a class="text-gray-600 hover:text-gray-800">Help Center</a>
-            </li>
-            <li>
-              <nuxt-link to="/contact" class="text-gray-600 hover:text-gray-800"
-                >Contact</nuxt-link
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.faq }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.faq }}
+                </span></a
               >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Privacy</a>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.helpcenter }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.helpcenter }}
+                </span></a
+              >
             </li>
             <li>
-              <a class="text-gray-600 hover:text-gray-800">Term</a>
+              <nuxt-link
+                to="/contact"
+                class="text-gray-600 hover:text-gray-800"
+              >
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.contact }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.contact }}
+                </span></nuxt-link
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.privacy }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.privacy }}
+                </span></a
+              >
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">
+                <span v-if="$store.state.lang == 'id'">
+                  {{ id.term }}
+                </span>
+                <span v-if="$store.state.lang == 'en'">
+                  {{ en.term }}
+                </span></a
+              >
             </li>
           </nav>
         </div>
@@ -193,7 +299,58 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      en: {
+        product: 'PRODUCT',
+        features: 'Features',
+        pricing: 'Pricing',
+        developer: 'Developer',
+        technology: 'Technology',
+        //
+        company: 'COMPANY',
+        about: 'About',
+        blog: 'Blog',
+        github: 'Github',
+        becomepartner: 'Become Partner',
+        //
+        support: 'SUPPORT',
+        faq: 'FAQ',
+        helpcenter: 'Help Center',
+        contact: 'Contact',
+        privacy: 'Privacy',
+        term: 'Term',
+        //
+        headline:
+          'Exceptional accounting and bookkeeping solutions in this most demanding era.',
+      },
+      id: {
+        product: 'Produk',
+        features: 'Fitur',
+        pricing: 'Harga',
+        developer: 'Pengembang',
+        technology: 'Teknologi',
+        //
+        company: 'Perusahaan',
+        about: 'Tentang Kami',
+        blog: 'Blog',
+        github: 'Github',
+        becomepartner: 'Menjadi Mitra',
+        //
+        support: 'Dukungan',
+        faq: 'Pertanyaan',
+        helpcenter: 'Pusat Bantuan',
+        contact: 'Kontak',
+        privacy: 'Pribadi',
+        term: 'Istilah',
+        //
+        headline:
+          'Solusi akuntansi dan pembukuan yang luar biasa di era paling menuntut ini.',
+      },
+    }
+  },
+}
 </script>
 
 <style></style>
