@@ -22,6 +22,10 @@ module.exports = {
         secondary: '#718096',
         light: '#f4f5f7',
       },
+      spacing: {
+        '96': '24rem',
+        '128': '26rem',
+      },
     },
   },
   variants: {},

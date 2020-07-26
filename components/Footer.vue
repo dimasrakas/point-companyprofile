@@ -326,19 +326,19 @@ export default {
           'Exceptional accounting and bookkeeping solutions in this most demanding era.',
       },
       id: {
-        product: 'Produk',
+        product: 'PRODUK',
         features: 'Fitur',
         pricing: 'Harga',
         developer: 'Pengembang',
         technology: 'Teknologi',
         //
-        company: 'Perusahaan',
+        company: 'PERUSAHAAN',
         about: 'Tentang Kami',
         blog: 'Blog',
         github: 'Github',
         becomepartner: 'Menjadi Mitra',
         //
-        support: 'Dukungan',
+        support: 'DUKUNGAN',
         faq: 'Pertanyaan',
         helpcenter: 'Pusat Bantuan',
         contact: 'Kontak',
