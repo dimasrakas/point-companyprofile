@@ -395,9 +395,7 @@ export default {
           this.optionsHeader = response.data
           this.getHeaderOne()
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
     async getHeaderOne() {
       try {
@@ -410,9 +408,7 @@ export default {
           this.headerString.en = response.data.name_lang.en
           this.headerString.id = response.data.name_lang.id
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
 
     // Get Data Sub Header
@@ -430,10 +426,7 @@ export default {
           this.showFeatureSubHeaders = true
           this.loading = false
         }
-      } catch (e) {
-        // console.log(this.response.error)
-        console.log('error')
-      }
+      } catch (e) {}
     },
     async getSubHeaderOne() {
       try {
@@ -446,9 +439,7 @@ export default {
           this.headerString.en = response.data.name_lang.en
           this.headerString.id = response.data.name_lang.id
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
     async updateSubHeader() {
       this.loading = true
@@ -465,9 +456,7 @@ export default {
           this.showFeatureSubHeaders = true
           this.loading = false
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
 
     async updateDetail() {
@@ -485,10 +474,7 @@ export default {
           this.showFeatureDetails = true
           this.loading = false
         }
-      } catch (e) {
-        // console.log(this.response.error)
-        console.log('error')
-      }
+      } catch (e) {}
     },
   },
 }

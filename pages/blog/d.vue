@@ -138,6 +138,7 @@
           </ShareNetwork>
         </div>
 
+        // eslint-disable-next-line vue/no-v-html
         <p v-html="articleDetail.html_content"></p>
       </div>
       <div v-if="!$isMobile()" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -189,14 +190,9 @@ export default {
 
         if (response.status === 200) {
           this.articleDetail = response.data
-          console.log(this.articleDetail)
           this.headers = response.headers
-
-          console.log(response.headers)
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
   },
 }

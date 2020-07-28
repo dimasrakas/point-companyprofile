@@ -211,9 +211,7 @@ export default {
         if (response.status === 200) {
           this.form = ''
         }
-      } catch (e) {
-        console.log(e.response.error)
-      }
+      } catch (e) {}
     },
   },
 }

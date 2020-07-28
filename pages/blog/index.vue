@@ -200,11 +200,8 @@ export default {
           this.totalitems = response.data.per_page
           this.page = response.data.current_page - 1
           this.loading = false
-          console.log(response.data)
         }
-      } catch (e) {
-        console.log(e.response.error)
-      }
+      } catch (e) {}
     },
 
     pageChange(page) {

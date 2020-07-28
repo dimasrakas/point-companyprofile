@@ -135,9 +135,7 @@ export default {
           this.featureHeaders = response.data
           this.loading = false
         }
-      } catch (e) {
-        console.log(this.response.error)
-      }
+      } catch (e) {}
     },
   },
 }

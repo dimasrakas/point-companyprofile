@@ -85,12 +85,8 @@ export default {
 
         if (response.status === 200) {
           this.video = response.data.url
-          console.log(response.data)
-          console.log(this.video)
         }
-      } catch (e) {
-        console.log(e.response.error)
-      }
+      } catch (e) {}
     },
   },
 }
