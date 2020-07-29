@@ -15,24 +15,24 @@
                 v-scroll-reveal="{ delay: 200 }"
                 class="font-bold font-header text-white text-2xl md:text-5xl lg:text-5xl leading-tight mb-4 pt-16"
               >
-                <span v-if="$store.state.lang == 'id'" v-html="id.heading">
-                  {{ id.heading }}
-                </span>
-                <span v-if="$store.state.lang == 'en'" v-html="en.heading">
-                  {{ en.heading }}
-                </span>
+                <span v-if="$store.state.lang == 'id'" v-html="id.heading">{{
+                  id.heading
+                }}</span>
+                <span v-if="$store.state.lang == 'en'" v-html="en.heading">{{
+                  en.heading
+                }}</span>
               </h1>
 
               <p
                 v-scroll-reveal="{ delay: 250 }"
                 class="text-light font-description md:text-xl md:pr-48"
               >
-                <span v-if="$store.state.lang == 'id'">
-                  {{ id.description }}
-                </span>
-                <span v-if="$store.state.lang == 'en'">
-                  {{ en.description }}
-                </span>
+                <span v-if="$store.state.lang == 'id'">{{
+                  id.description
+                }}</span>
+                <span v-if="$store.state.lang == 'en'">{{
+                  en.description
+                }}</span>
               </p>
 
               <nuxt-link
@@ -40,12 +40,12 @@
                 to="/features"
                 class="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg shadow"
               >
-                <span v-if="$store.state.lang == 'id'">
-                  {{ id.subheading }}
-                </span>
-                <span v-if="$store.state.lang == 'en'">
-                  {{ en.subheading }}
-                </span>
+                <span v-if="$store.state.lang == 'id'">{{
+                  id.subheading
+                }}</span>
+                <span v-if="$store.state.lang == 'en'">{{
+                  en.subheading
+                }}</span>
               </nuxt-link>
             </div>
             <div class="md:w-1/2 relative">
@@ -58,16 +58,16 @@
                   <img
                     class="py-2"
                     src="~/assets/icon/shipping-and-delivery.svg"
-                    alt=""
+                    alt
                   />
 
                   <div class="text-gray-700 font-medium text-center">
-                    <span v-if="$store.state.lang == 'id'">
-                      {{ id.service }}
-                    </span>
-                    <span v-if="$store.state.lang == 'en'">
-                      {{ en.service }}
-                    </span>
+                    <span v-if="$store.state.lang == 'id'">{{
+                      id.service
+                    }}</span>
+                    <span v-if="$store.state.lang == 'en'">{{
+                      en.service
+                    }}</span>
                   </div>
                 </div>
 
@@ -76,15 +76,15 @@
                   class="ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
                   style="transform: rotate(-8deg); z-index: 2;"
                 >
-                  <img class="py-2" src="~/assets/icon/store.svg" alt="" />
+                  <img class="py-2" src="~/assets/icon/store.svg" alt />
 
                   <div class="text-gray-700 font-medium text-center">
-                    <span v-if="$store.state.lang == 'id'">
-                      {{ id.trading }}
-                    </span>
-                    <span v-if="$store.state.lang == 'en'">
-                      {{ en.trading }}
-                    </span>
+                    <span v-if="$store.state.lang == 'id'">{{
+                      id.trading
+                    }}</span>
+                    <span v-if="$store.state.lang == 'en'">{{
+                      en.trading
+                    }}</span>
                   </div>
                 </div>
 
@@ -100,16 +100,16 @@
                   <img
                     class="py-2"
                     src="~/assets/icon/shipping-and-delivery(1).svg"
-                    alt=""
+                    alt
                   />
 
                   <div class="text-gray-700 font-medium text-center">
-                    <span v-if="$store.state.lang == 'id'">
-                      {{ id.manufacture }}
-                    </span>
-                    <span v-if="$store.state.lang == 'en'">
-                      {{ en.manufacture }}
-                    </span>
+                    <span v-if="$store.state.lang == 'id'">{{
+                      id.manufacture
+                    }}</span>
+                    <span v-if="$store.state.lang == 'en'">{{
+                      en.manufacture
+                    }}</span>
                   </div>
                 </div>
 
@@ -128,12 +128,12 @@
                       v-scroll-reveal="{ delay: 550 }"
                       class="text-lg text-gray-700 font-bold mb-3"
                     >
-                      <span v-if="$store.state.lang == 'id'">
-                        {{ id.welcome }}
-                      </span>
-                      <span v-if="$store.state.lang == 'en'">
-                        {{ en.welcome }}
-                      </span>
+                      <span v-if="$store.state.lang == 'id'">{{
+                        id.welcome
+                      }}</span>
+                      <span v-if="$store.state.lang == 'en'">{{
+                        en.welcome
+                      }}</span>
                     </h2>
                     <div v-scroll-reveal="{ delay: 600 }" class="flex mb-5">
                       <div class="w-16 rounded-full bg-gray-100 py-2 px-4 mr-2">
@@ -193,12 +193,12 @@
                       v-scroll-reveal="{ delay: 700 }"
                       class="text-lg text-gray-700 font-bold mb-3"
                     >
-                      <span v-if="$store.state.lang == 'id'">
-                        {{ id.dashboard }}
-                      </span>
-                      <span v-if="$store.state.lang == 'en'">
-                        {{ en.dashboard }}
-                      </span>
+                      <span v-if="$store.state.lang == 'id'">{{
+                        id.dashboard
+                      }}</span>
+                      <span v-if="$store.state.lang == 'en'">{{
+                        en.dashboard
+                      }}</span>
                     </h2>
 
                     <div
@@ -348,12 +348,12 @@
                 </div>
                 <div class="flex-1 px-4 py-8">
                   <h2 class="text-xs text-gray-700 font-bold mb-1">
-                    <span v-if="$store.state.lang == 'id'">
-                      {{ id.welcome }}
-                    </span>
-                    <span v-if="$store.state.lang == 'en'">
-                      {{ en.welcome }}
-                    </span>
+                    <span v-if="$store.state.lang == 'id'">{{
+                      id.welcome
+                    }}</span>
+                    <span v-if="$store.state.lang == 'en'">{{
+                      en.welcome
+                    }}</span>
                   </h2>
                   <div class="flex mb-5">
                     <div class="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
@@ -399,12 +399,12 @@
                   </div>
 
                   <h2 class="text-xs text-gray-700 font-bold mb-1">
-                    <span v-if="$store.state.lang == 'id'">
-                      {{ id.dashboard }}
-                    </span>
-                    <span v-if="$store.state.lang == 'en'">
-                      {{ en.dashboard }}
-                    </span>
+                    <span v-if="$store.state.lang == 'id'">{{
+                      id.dashboard
+                    }}</span>
+                    <span v-if="$store.state.lang == 'en'">{{
+                      en.dashboard
+                    }}</span>
                   </h2>
 
                   <div
@@ -475,7 +475,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 240"
       >
-        <path fill-opacity="1" d="M0,224L1440,32L1440,320L0,320Z"></path>
+        <path fill-opacity="1" d="M0,224L1440,32L1440,320L0,320Z" />
       </svg>
     </div>
   </div>
@@ -494,8 +494,8 @@ export default {
         service: 'Jasa',
         trading: 'Dagang',
         manufacture: 'Manufaktur',
-        welcome: 'Selamat Datang kembali, Tiara',
-        dashboard: 'Ini adalah papan kendali anda',
+        welcome: 'Selamat Datang di Website kami',
+        dashboard: ' Papan Kendali',
       },
       en: {
         heading: 'Fully control your business <br> while on the go',
@@ -506,8 +506,8 @@ export default {
         service: 'Service',
         trading: 'Trading',
         manufacture: 'Manufacture',
-        welcome: 'Welcome back, Tiara',
-        dashboard: ' This is your Dashboard',
+        welcome: 'Welcome to Our Website',
+        dashboard: ' Dashboard',
       },
     }
   },
